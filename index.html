@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexandre Vincent — Développeur informatique freelance</title>
-  <meta name="description"
-    content="Portfolio d'Alexandre Vincent, développeur informatique freelance (Clermont-Ferrand / Paris). Développement web et logiciel, Python, maintenance applicative et automatisation.">
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%231d1d1b' stroke='%23d4826e' stroke-width='4'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23edece8' font-family='sans-serif' font-size='26' font-weight='600'%3EAV%3C/text%3E%3C/svg%3E">
+  <title>Alexandre Vincent — Projets | Développeur informatique freelance</title>
+  <meta name="description" content="Projets et réalisations web d'Alexandre Vincent, développeur informatique freelance (Clermont-Ferrand / Paris).">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%231d1d1b' stroke='%23d4826e' stroke-width='4'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23edece8' font-family='sans-serif' font-size='26' font-weight='600'%3EAV%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,16 +15,15 @@
   <header class="entete">
     <div class="conteneur entete-interne">
       <div class="entete-identite">
-        <h1 class="nom">Alexandre Vincent</h1>
+        <h1 class="nom"><a class="nom-lien" href="index.html">Alexandre Vincent</a></h1>
         <p class="localisation">Développeur informatique freelance · Clermont-Ferrand / Paris</p>
-        <p class="presentation">À la recherche de missions en développement web ou logiciel, Python, correction et
-          débogage, maintenance applicative, scripts et automatisation.</p>
+        <p class="presentation">À la recherche de missions en développement web ou logiciel, Python, correction et débogage, maintenance applicative, scripts et automatisation.</p>
       </div>
       <nav class="navigation" aria-label="Navigation principale">
         <ul class="nav-liste">
-          <li><a class="nav-lien" href="#projets">Projets</a></li>
-          <li><a class="nav-lien" href="#a-propos">À propos</a></li>
-          <li><a class="nav-lien" href="#contact">Contact</a></li>
+          <li><a class="nav-lien nav-lien-actif" href="index.html" aria-current="page">Projets</a></li>
+          <li><a class="nav-lien" href="a-propos.html">À propos</a></li>
+          <li><a class="nav-lien" href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -34,7 +31,7 @@
 
   <main class="conteneur">
 
-    <section id="projets" class="section" aria-labelledby="titre-projets">
+    <section class="section" aria-labelledby="titre-projets">
       <h2 id="titre-projets" class="section-titre">Projets</h2>
 
       <h3 class="categorie-projets">Sites en ligne</h3>
@@ -44,8 +41,7 @@
           <a class="carte-projet" href="https://www.tiberiade.fr/" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">Association Tibériade</h4>
-              <p class="carte-description">Création et mise en ligne du site vitrine de l'association Tibériade à Paris.
-              </p>
+              <p class="carte-description">Création et mise en ligne du site vitrine de l'association Tibériade à Paris.</p>
               <span class="carte-lien">tiberiade.fr</span>
             </div>
           </a>
@@ -55,8 +51,7 @@
           <a class="carte-projet" href="https://www.ww1rc.org.uk" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">Musée de la Première Guerre mondiale (Portsmouth)</h4>
-              <p class="carte-description">Création du site vitrine du musée WW1 Remembrance Centre à Portsmouth,
-                Royaume-Uni.</p>
+              <p class="carte-description">Création du site vitrine du musée WW1 Remembrance Centre à Portsmouth, Royaume-Uni.</p>
               <span class="carte-lien">ww1rc.org.uk</span>
             </div>
           </a>
@@ -71,8 +66,7 @@
           <a class="carte-projet" href="Site-ex/application%20mobile%20SaaS/index.html" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">FOKUS — Application mobile SaaS</h4>
-              <p class="carte-description">Site de présentation pour une application de concentration et de blocage des
-                distractions, en français, anglais et espagnol.</p>
+              <p class="carte-description">Site de présentation pour une application de concentration et de blocage des distractions, en français, anglais et espagnol.</p>
               <span class="carte-lien">Ouvrir le site</span>
             </div>
           </a>
@@ -82,32 +76,27 @@
           <a class="carte-projet" href="Site-ex/Boulangerie%20artisanale/index.html" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">Maison Aubrac — Boulangerie artisanale</h4>
-              <p class="carte-description">Site vitrine d'une boulangerie au levain naturel à Lyon présentant l'histoire
-                du fournil, les pains et les horaires.</p>
+              <p class="carte-description">Site vitrine d'une boulangerie au levain naturel à Lyon présentant l'histoire du fournil, les pains et les horaires.</p>
               <span class="carte-lien">Ouvrir le site</span>
             </div>
           </a>
         </li>
 
         <li class="element-projet">
-          <a class="carte-projet" href="Site-ex/Cabinet%20d%E2%80%99architecte/index.html" target="_blank"
-            rel="noopener">
+          <a class="carte-projet" href="Site-ex/Cabinet%20d%E2%80%99architecte/index.html" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">Atelier Marchetti — Cabinet d'architecte</h4>
-              <p class="carte-description">Site d'un atelier d'architecture et de rénovation à Marseille présentant ses
-                réalisations, son équipe et ses coordonnées.</p>
+              <p class="carte-description">Site d'un atelier d'architecture et de rénovation à Marseille présentant ses réalisations, son équipe et ses coordonnées.</p>
               <span class="carte-lien">Ouvrir le site</span>
             </div>
           </a>
         </li>
 
         <li class="element-projet">
-          <a class="carte-projet" href="Site-ex/dashboard%20de%20suivi%20d%E2%80%99habitudes/index.html" target="_blank"
-            rel="noopener">
+          <a class="carte-projet" href="Site-ex/dashboard%20de%20suivi%20d%E2%80%99habitudes/index.html" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">Rythme — Suivi d'habitudes</h4>
-              <p class="carte-description">Application web minimaliste de suivi d'habitudes quotidiennes avec calendrier
-                sur 30 jours, statistiques et raccourcis clavier.</p>
+              <p class="carte-description">Application web minimaliste de suivi d'habitudes quotidiennes avec calendrier sur 30 jours, statistiques et raccourcis clavier.</p>
               <span class="carte-lien">Ouvrir le site</span>
             </div>
           </a>
@@ -117,8 +106,7 @@
           <a class="carte-projet" href="Site-ex/Photographe/index.html" target="_blank" rel="noopener">
             <div class="carte-corps">
               <h4 class="carte-titre">Inès Valcourt — Photographe</h4>
-              <p class="carte-description">Portfolio d'une photographe documentaire et de mariage à Bordeaux regroupant
-                séries récentes, tarifs et formulaire de contact.</p>
+              <p class="carte-description">Portfolio d'une photographe documentaire et de mariage à Bordeaux regroupant séries récentes, tarifs et formulaire de contact.</p>
               <span class="carte-lien">Ouvrir le site</span>
             </div>
           </a>
@@ -126,99 +114,15 @@
 
         <li class="element-projet">
           <a class="carte-projet" href="Site-ex/restaurant%20gastronomique/index.html" target="_blank" rel="noopener">
-            <img class="carte-image" src="Site-ex/restaurant%20gastronomique/assets/images/salle_lyon.jpg"
-              alt="Salle du restaurant Maison Lumière à Lyon" loading="lazy">
+            <img class="carte-image" src="Site-ex/restaurant%20gastronomique/assets/images/salle_lyon.jpg" alt="Salle du restaurant Maison Lumière à Lyon" loading="lazy">
             <div class="carte-corps">
               <h4 class="carte-titre">Maison Lumière — Restaurant gastronomique</h4>
-              <p class="carte-description">Site multilingue d'un restaurant étoilé dans le Vieux Lyon avec présentation
-                du chef, carte, galerie photo et réservation.</p>
+              <p class="carte-description">Site multilingue d'un restaurant étoilé dans le Vieux Lyon avec présentation du chef, carte, galerie photo et réservation.</p>
               <span class="carte-lien">Ouvrir le site</span>
             </div>
           </a>
         </li>
 
-      </ul>
-    </section>
-
-    <section id="a-propos" class="section" aria-labelledby="titre-a-propos">
-      <h2 id="titre-a-propos" class="section-titre">À propos</h2>
-      <p class="texte-section">Je travaille en freelance depuis 2025. Je suis diplômé d'un bachelor en cybersécurité,
-        spécialité Ethical Hacking, de l'EFREI ainsi que d'un diplôme de Concepteur de Systèmes d'information du Groupe
-        3iL. Je développe des sites web, de petites applications interactives et des scripts d'automatisation.</p>
-
-      <div class="grille-parcours">
-        <div class="colonne-parcours">
-          <h3 class="sous-titre">Formation</h3>
-          <ul class="liste-parcours">
-            <li class="element-parcours">
-              <span class="parcours-titre">Groupe 3iL — Paris</span>
-              <span class="parcours-detail">Diplôme de Concepteur de Systèmes d'information (octobre 2025)</span>
-            </li>
-            <li class="element-parcours">
-              <span class="parcours-titre">EFREI — Paris</span>
-              <span class="parcours-detail">Bachelor Cybersécurité &amp; Ethical Hacking (octobre 2025)</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="colonne-parcours">
-          <h3 class="sous-titre">Expérience</h3>
-          <ul class="liste-parcours">
-            <li class="element-parcours">
-              <span class="parcours-titre">Développement web et applicatif (2024 – aujourd'hui)</span>
-              <span class="parcours-detail">Création de sites vitrines (Association Tibériade, Musée de la Première
-                Guerre mondiale à Portsmouth) et développement d'applications ludiques interactives sur ordinateur et
-                téléphone.</span>
-            </li>
-            <li class="element-parcours">
-              <span class="parcours-titre">Missions en cybersécurité (2021 – 2025)</span>
-              <span class="parcours-detail">I-TRACING (Courbevoie, en alternance, 2024–2025), Vallourec (Valenciennes,
-                2024), ELSAN (Paris, 2023), Michelin (Clermont-Ferrand, 2021).</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bloc-competences">
-        <h3 class="sous-titre">Langages et environnements</h3>
-        <ul class="liste-competences">
-          <li class="competence">HTML</li>
-          <li class="competence">CSS</li>
-          <li class="competence">JavaScript</li>
-          <li class="competence">TypeScript</li>
-          <li class="competence">PHP</li>
-          <li class="competence">Python</li>
-          <li class="competence">SQL</li>
-          <li class="competence">C</li>
-          <li class="competence">Bash</li>
-          <li class="competence">Linux</li>
-          <li class="competence">Windows</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section" aria-labelledby="titre-contact">
-      <h2 id="titre-contact" class="section-titre">Contact</h2>
-      <p class="texte-section">Disponible pour des missions de développement web ou logiciel, correction et débogage,
-        maintenance applicative, scripts et automatisation.</p>
-      <ul class="liste-contact">
-        <li class="element-contact">
-          <span class="contact-libelle">E-mail</span>
-          <a class="contact-lien" href="mailto:alexandre.vincent.22@efrei.net">alexandre.vincent.22@efrei.net</a>
-        </li>
-        <li class="element-contact">
-          <span class="contact-libelle">Téléphone</span>
-          <a class="contact-lien" href="tel:+33677566389">+33 6 77 56 63 89</a>
-        </li>
-        <li class="element-contact">
-          <span class="contact-libelle">LinkedIn</span>
-          <a class="contact-lien" href="https://www.linkedin.com/in/alexandre-vincent-719189263/" target="_blank"
-            rel="noopener">linkedin.com/in/alexandre-vincent-719189263</a>
-        </li>
-        <li class="element-contact">
-          <span class="contact-libelle">Localisation</span>
-          <span class="contact-valeur">Clermont-Ferrand (63000) / Paris</span>
-        </li>
       </ul>
     </section>
 
