@@ -13,11 +13,15 @@
 <body>
 
   <header class="entete">
-    <div class="conteneur entete-interne">
-      <div class="entete-identite">
-        <h1 class="nom"><a class="nom-lien" href="index.html">Alexandre Vincent</a></h1>
-        <p class="localisation">Développeur informatique freelance · Clermont-Ferrand / Paris</p>
-        <p class="presentation">À la recherche de missions en développement web ou logiciel, Python, correction et débogage, maintenance applicative, scripts et automatisation.</p>
+    <div class="conteneur entete-barre">
+      <div class="identite-compacte">
+        <a class="nom-lien" href="index.html">
+          <span class="monogramme" aria-hidden="true">AV</span>
+          <span class="nom-bloc">
+            <span class="nom">Alexandre Vincent</span>
+            <span class="localisation">Développeur informatique freelance · Clermont-Ferrand / Paris</span>
+          </span>
+        </a>
       </div>
       <nav class="navigation" aria-label="Navigation principale">
         <ul class="nav-liste">
@@ -31,63 +35,145 @@
 
   <main class="conteneur">
 
-    <section class="section" aria-labelledby="titre-a-propos">
-      <h2 id="titre-a-propos" class="section-titre">À propos</h2>
-      <p class="texte-section">Je travaille en freelance depuis 2025. Je suis diplômé d'un bachelor en cybersécurité, spécialité Ethical Hacking, de l'EFREI ainsi que d'un diplôme de Concepteur de Systèmes d'information du Groupe 3iL. Je développe des sites web, de petites applications interactives et des scripts d'automatisation.</p>
-
-      <div class="grille-parcours">
-        <div class="colonne-parcours">
-          <h3 class="sous-titre">Formation</h3>
-          <ul class="liste-parcours">
-            <li class="element-parcours">
-              <span class="parcours-titre">Groupe 3iL — Paris</span>
-              <span class="parcours-detail">Diplôme de Concepteur de Systèmes d'information (octobre 2025)</span>
-            </li>
-            <li class="element-parcours">
-              <span class="parcours-titre">EFREI — Paris</span>
-              <span class="parcours-detail">Bachelor Cybersécurité &amp; Ethical Hacking (octobre 2025)</span>
-            </li>
-          </ul>
+    <section class="intro-page" aria-labelledby="titre-page">
+      <div class="intro-grille">
+        <div>
+          <p class="surtitre">Profil &amp; Parcours</p>
+          <h1 id="titre-page" class="titre-page">À propos</h1>
         </div>
+        <p class="intro-texte">
+          Je travaille en freelance depuis 2025. Je suis diplômé d'un bachelor en cybersécurité, spécialité Ethical Hacking, de l'EFREI ainsi que d'un diplôme de Concepteur de Systèmes d'information du Groupe 3iL. Je développe des sites web, de petites applications interactives et des scripts d'automatisation.
+        </p>
+      </div>
+    </section>
 
-        <div class="colonne-parcours">
-          <h3 class="sous-titre">Expérience</h3>
-          <ul class="liste-parcours">
-            <li class="element-parcours">
-              <span class="parcours-titre">Développement web et applicatif (2024 – aujourd'hui)</span>
-              <span class="parcours-detail">Création de sites vitrines (Association Tibériade, Musée de la Première Guerre mondiale à Portsmouth) et développement d'applications ludiques interactives sur ordinateur et téléphone.</span>
-            </li>
-            <li class="element-parcours">
-              <span class="parcours-titre">Missions en cybersécurité (2021 – 2025)</span>
-              <span class="parcours-detail">I-TRACING (Courbevoie, en alternance, 2024–2025), Vallourec (Valenciennes, 2024), ELSAN (Paris, 2023), Michelin (Clermont-Ferrand, 2021).</span>
-            </li>
-          </ul>
-        </div>
+    <section class="section" aria-labelledby="titre-experiences">
+      <div class="entete-section">
+        <h2 id="titre-experiences" class="section-titre">Expérience professionnelle</h2>
       </div>
 
-      <div class="bloc-competences">
-        <h3 class="sous-titre">Langages et environnements</h3>
-        <ul class="liste-competences">
-          <li class="competence">HTML</li>
-          <li class="competence">CSS</li>
-          <li class="competence">JavaScript</li>
-          <li class="competence">TypeScript</li>
-          <li class="competence">PHP</li>
-          <li class="competence">Python</li>
-          <li class="competence">SQL</li>
-          <li class="competence">C</li>
-          <li class="competence">Bash</li>
-          <li class="competence">Linux</li>
-          <li class="competence">Windows</li>
-        </ul>
+      <div class="registre">
+
+        <article class="registre-ligne">
+          <div class="registre-date">Juin 2026</div>
+          <div class="registre-contenu">
+            <h3 class="registre-titre">Création du site vitrine de l'association Tibériade</h3>
+            <p class="registre-description">Conception, développement et mise en ligne du site officiel (<a class="lien-texte" href="https://www.tiberiade.fr/" target="_blank" rel="noopener">tiberiade.fr</a>).</p>
+          </div>
+          <div class="registre-lieu">Paris</div>
+        </article>
+
+        <article class="registre-ligne">
+          <div class="registre-date">Janv. 2025 – aujourd'hui</div>
+          <div class="registre-contenu">
+            <h3 class="registre-titre">Développement d'applications ludiques interactives</h3>
+            <p class="registre-description">Conception et développement de mini-jeux destinés à animer des soirées entre amis, programmation des règles du jeu et des interactions utilisateur sur ordinateur et téléphone.</p>
+          </div>
+          <div class="registre-lieu">Clermont-Ferrand, Paris</div>
+        </article>
+
+        <article class="registre-ligne">
+          <div class="registre-date">Mai 2024</div>
+          <div class="registre-contenu">
+            <h3 class="registre-titre">Création du site vitrine du musée de la Première Guerre mondiale</h3>
+            <p class="registre-description">Réalisation du site web du WW1 Remembrance Centre (<a class="lien-texte" href="https://www.ww1rc.org.uk" target="_blank" rel="noopener">ww1rc.org.uk</a>).</p>
+          </div>
+          <div class="registre-lieu">Portsmouth, Royaume-Uni</div>
+        </article>
+
+        <article class="registre-ligne">
+          <div class="registre-date">2021 – 2025</div>
+          <div class="registre-contenu">
+            <h3 class="registre-titre">Missions en cybersécurité</h3>
+            <ul class="sous-liste-registre">
+              <li><strong>I-TRACING</strong> — En alternance (octobre 2024 – juin 2025, Courbevoie)</li>
+              <li><strong>Vallourec</strong> (juin 2024 – juillet 2024, Valenciennes)</li>
+              <li><strong>ELSAN</strong> (mai 2023 – juin 2023, Paris)</li>
+              <li><strong>Michelin</strong> (juin 2021, Clermont-Ferrand)</li>
+            </ul>
+          </div>
+          <div class="registre-lieu">France</div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-formation">
+      <div class="entete-section">
+        <h2 id="titre-formation" class="section-titre">Formation</h2>
+      </div>
+
+      <div class="registre">
+
+        <article class="registre-ligne">
+          <div class="registre-date">Octobre 2025</div>
+          <div class="registre-contenu">
+            <h3 class="registre-titre">Diplôme de Concepteur de Systèmes d'information</h3>
+            <p class="registre-description">Groupe 3iL</p>
+          </div>
+          <div class="registre-lieu">Paris</div>
+        </article>
+
+        <article class="registre-ligne">
+          <div class="registre-date">Octobre 2025</div>
+          <div class="registre-contenu">
+            <h3 class="registre-titre">Bachelor Cybersécurité &amp; Ethical Hacking</h3>
+            <p class="registre-description">EFREI</p>
+          </div>
+          <div class="registre-lieu">Paris</div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-competences">
+      <div class="entete-section">
+        <h2 id="titre-competences" class="section-titre">Langages et environnements</h2>
+      </div>
+
+      <div class="grille-competences">
+        <div class="carte-competence">
+          <h3 class="sous-titre">Développement Web</h3>
+          <ul class="liste-competences">
+            <li class="competence">HTML</li>
+            <li class="competence">CSS</li>
+            <li class="competence">JavaScript</li>
+            <li class="competence">TypeScript</li>
+            <li class="competence">Node.js</li>
+            <li class="competence">PHP</li>
+          </ul>
+        </div>
+
+        <div class="carte-competence">
+          <h3 class="sous-titre">Logiciel, Données &amp; Scripts</h3>
+          <ul class="liste-competences">
+            <li class="competence">Python</li>
+            <li class="competence">SQL</li>
+            <li class="competence">C</li>
+            <li class="competence">Bash</li>
+          </ul>
+        </div>
+
+        <div class="carte-competence">
+          <h3 class="sous-titre">Systèmes d'exploitation</h3>
+          <ul class="liste-competences">
+            <li class="competence">Linux</li>
+            <li class="competence">Windows</li>
+          </ul>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="pied-de-page">
-    <div class="conteneur">
+    <div class="conteneur pied-interne">
       <p>Alexandre Vincent — Développeur informatique freelance</p>
+      <p class="pied-liens">
+        <a href="index.html">Projets</a>
+        <span aria-hidden="true">·</span>
+        <a href="contact.html">Contact</a>
+      </p>
     </div>
   </footer>
 

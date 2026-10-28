@@ -1,10 +1,12 @@
 :root {
-  --fond: #141413;
-  --surface: #1d1d1b;
-  --surface-survol: #232320;
+  --fond: #131312;
+  --surface: #1b1b19;
+  --surface-survol: #22221f;
   --texte: #edece8;
   --texte-secondaire: #a39f98;
-  --bordure: #302f2c;
+  --texte-discret: #75716b;
+  --bordure: #2d2c29;
+  --bordure-forte: #3f3d39;
   --accent: #d4826e;
 }
 
@@ -25,42 +27,38 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 }
 
 .conteneur {
   width: 100%;
-  max-width: 1040px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
+
+/* ================= EN-TÊTE & NAVIGATION ================= */
 
 .entete {
-  padding: 48px 0 36px;
   border-bottom: 1px solid var(--bordure);
-  margin-bottom: 48px;
+  background-color: var(--fond);
 }
 
-.entete-interne {
+.entete-barre {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
-}
-
-.entete-identite {
-  max-width: 660px;
-}
-
-.nom {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  margin-bottom: 6px;
+  min-height: 84px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .nom-lien {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
   color: inherit;
   text-decoration: none;
 }
@@ -71,92 +69,163 @@ body {
   border-radius: 2px;
 }
 
-.localisation {
-  font-size: 0.95rem;
-  font-weight: 500;
+.monogramme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--surface);
+  border: 1px solid var(--bordure-forte);
   color: var(--accent);
-  margin-bottom: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
 }
 
-.presentation {
+.nom-bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+.nom {
   font-size: 1.0625rem;
-  color: var(--texte-secondaire);
-  max-width: 62ch;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: var(--texte);
 }
 
-.navigation {
-  padding-top: 6px;
+.localisation {
+  font-size: 0.8125rem;
+  color: var(--texte-secondaire);
+  line-height: 1.35;
 }
 
 .nav-liste {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-lien {
+  display: inline-block;
   color: var(--texte-secondaire);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   font-weight: 500;
-  padding: 6px 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .nav-lien:hover {
   color: var(--texte);
-  border-bottom-color: var(--bordure);
+  background-color: var(--surface);
 }
 
 .nav-lien-actif,
 .nav-lien-actif:hover {
   color: var(--texte);
-  border-bottom-color: var(--accent);
+  background-color: var(--surface);
+  border-color: var(--bordure-forte);
+  border-bottom: 2px solid var(--accent);
 }
 
 .nav-lien:focus-visible {
   color: var(--texte);
   outline: 2px solid var(--accent);
-  outline-offset: 4px;
-  border-radius: 2px;
+  outline-offset: 2px;
 }
+
+/* ================= BANDEAU D'INTRODUCTION DE PAGE ================= */
 
 main.conteneur {
   flex: 1;
 }
 
-.section {
+.intro-page {
+  padding: 56px 0 48px;
+  border-bottom: 1px solid var(--bordure);
   margin-bottom: 56px;
 }
 
-.section-titre {
-  font-size: 1.375rem;
+.intro-grille {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.surtitre {
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.titre-page {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
   color: var(--texte);
 }
 
-.categorie-projets {
-  font-size: 0.95rem;
-  font-weight: 600;
+.intro-texte {
+  font-size: 1.05rem;
   color: var(--texte-secondaire);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 16px;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+/* ================= SECTIONS & EN-TÊTES DE SECTION ================= */
+
+.section {
+  margin-bottom: 64px;
+}
+
+.entete-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--bordure);
+  margin-bottom: 28px;
+}
+
+.section-titre {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--texte);
+}
+
+.compteur-section {
+  font-size: 0.8125rem;
+  color: var(--texte-discret);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================= GRILLES & CARTES DE PROJETS ================= */
+
+.grille-production {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .grille-projets {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-}
-
-.grille-espacement {
-  margin-bottom: 40px;
 }
 
 .element-projet {
@@ -167,14 +236,15 @@ main.conteneur {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 200px;
   background-color: var(--surface);
   border: 1px solid var(--bordure);
-  border-radius: 2px;
   color: inherit;
   text-decoration: none;
-  overflow: hidden;
   transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.carte-production {
+  border-top: 2px solid var(--accent);
 }
 
 .carte-projet:hover {
@@ -188,101 +258,192 @@ main.conteneur {
   outline-offset: 2px;
 }
 
-.carte-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
+.carte-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
   border-bottom: 1px solid var(--bordure);
+  font-size: 0.78rem;
+}
+
+.carte-indice {
+  font-weight: 600;
+  color: var(--texte-secondaire);
+  letter-spacing: 0.02em;
+}
+
+.carte-meta {
+  color: var(--texte-discret);
 }
 
 .carte-corps {
-  padding: 24px;
+  padding: 24px 22px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+.carte-corps-avec-vignette {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.carte-texte-vignette {
+  flex: 1;
+  min-width: 0;
+}
+
+.carte-vignette {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border: 1px solid var(--bordure-forte);
+  flex-shrink: 0;
+}
+
 .carte-titre {
-  font-size: 1.125rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 10px;
-  line-height: 1.35;
+  line-height: 1.3;
+  color: var(--texte);
 }
 
 .carte-description {
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--texte-secondaire);
-  margin-bottom: 20px;
-  flex: 1;
-  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.carte-pied {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  border-top: 1px solid var(--bordure);
+  margin-top: auto;
 }
 
 .carte-lien {
+  font-size: 0.84375rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.carte-fleche {
+  font-size: 0.9rem;
+  color: var(--texte-secondaire);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.carte-projet:hover .carte-fleche {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+/* ================= PAGE À PROPOS : REGISTRE & COMPÉTENCES ================= */
+
+.registre {
+  display: flex;
+  flex-direction: column;
+}
+
+.registre-ligne {
+  display: grid;
+  grid-template-columns: 190px 1fr 190px;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--bordure);
+  align-items: baseline;
+}
+
+.registre-ligne:first-child {
+  padding-top: 4px;
+}
+
+.registre-date {
   font-size: 0.875rem;
   font-weight: 500;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.registre-titre {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--texte);
+  margin-bottom: 6px;
+}
+
+.registre-description {
+  font-size: 0.95rem;
+  color: var(--texte-secondaire);
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.sous-liste-registre {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--texte-secondaire);
+}
+
+.sous-liste-registre strong {
+  color: var(--texte);
+  font-weight: 600;
+}
+
+.registre-lieu {
+  font-size: 0.875rem;
+  color: var(--texte-discret);
+  text-align: right;
+}
+
+.lien-texte {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.texte-section {
-  font-size: 1rem;
-  color: var(--texte-secondaire);
-  max-width: 65ch;
-  line-height: 1.7;
+.lien-texte:hover {
+  color: var(--texte);
 }
 
-.grille-parcours {
+.grille-competences {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  margin-top: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.carte-competence {
+  background-color: var(--surface);
+  border: 1px solid var(--bordure);
+  padding: 24px;
 }
 
 .sous-titre {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--texte);
-  margin-bottom: 14px;
-}
-
-.liste-parcours {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.element-parcours {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-left: 14px;
-  border-left: 2px solid var(--bordure);
-}
-
-.parcours-titre {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--texte);
-}
-
-.parcours-detail {
-  font-size: 0.925rem;
-  color: var(--texte-secondaire);
-  line-height: 1.55;
-}
-
-.bloc-competences {
-  margin-top: 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--bordure);
+  margin-bottom: 16px;
 }
 
 .liste-competences {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .competence {
@@ -293,22 +454,65 @@ main.conteneur {
   line-height: 1.4;
 }
 
-.liste-contact {
-  list-style: none;
-  margin-top: 24px;
+/* ================= PAGE CONTACT ================= */
+
+.contact-mise-en-page {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px 32px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.element-contact {
+.contact-colonne-missions .section-titre,
+.contact-colonne-coordonnees .section-titre {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--bordure);
+  margin-bottom: 24px;
+}
+
+.liste-missions {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 16px 20px;
+  gap: 14px;
+}
+
+.liste-missions li {
+  font-size: 0.95rem;
+  color: var(--texte-secondaire);
+  padding-left: 14px;
+  border-left: 2px solid var(--bordure-forte);
+  line-height: 1.5;
+}
+
+.liste-contact {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.carte-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 18px 22px;
   background-color: var(--surface);
   border: 1px solid var(--bordure);
-  border-radius: 2px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+a.carte-contact:hover {
+  border-color: var(--accent);
+  background-color: var(--surface-survol);
+}
+
+a.carte-contact:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .contact-libelle {
@@ -316,84 +520,131 @@ main.conteneur {
   font-weight: 600;
   color: var(--texte-secondaire);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
 }
 
 .contact-lien {
   font-size: 0.95rem;
+  font-weight: 500;
   color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-align: right;
   word-break: break-word;
-}
-
-.contact-lien:hover {
-  color: var(--texte);
-}
-
-.contact-lien:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 2px;
 }
 
 .contact-valeur {
   font-size: 0.95rem;
   color: var(--texte);
+  text-align: right;
 }
 
+/* ================= PIED DE PAGE ================= */
+
 .pied-de-page {
-  margin-top: 32px;
-  padding: 32px 0;
+  margin-top: 40px;
+  padding: 28px 0;
   border-top: 1px solid var(--bordure);
   font-size: 0.875rem;
   color: var(--texte-secondaire);
 }
 
-@media (max-width: 768px) {
-  .entete {
-    padding: 40px 0 32px;
-    margin-bottom: 40px;
+.pied-interne {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.pied-liens {
+  display: flex;
+  gap: 10px;
+}
+
+.pied-liens a {
+  color: var(--texte-secondaire);
+  text-decoration: none;
+}
+
+.pied-liens a:hover {
+  color: var(--texte);
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 960px) {
+  .grille-projets,
+  .grille-competences {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .entete-interne {
-    flex-direction: column;
-    gap: 20px;
+  .intro-grille,
+  .contact-mise-en-page {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .grille-projets {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
+  .registre-ligne {
+    grid-template-columns: 150px 1fr;
+    gap: 12px 20px;
   }
 
-  .section {
-    margin-bottom: 48px;
+  .registre-lieu {
+    grid-column: 2;
+    text-align: left;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .conteneur {
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
-  .nom {
-    font-size: 1.625rem;
-  }
-
-  .presentation {
-    font-size: 1rem;
-  }
-
-  .nav-liste {
+  .entete-barre {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
   }
 
-  .grille-projets {
+  .nav-liste {
+    width: 100%;
+    border-top: 1px solid var(--bordure);
+    padding-top: 12px;
+  }
+
+  .nav-lien {
+    padding: 6px 12px;
+  }
+
+  .intro-page {
+    padding: 36px 0 32px;
+    margin-bottom: 40px;
+  }
+
+  .grille-production,
+  .grille-projets,
+  .grille-competences {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .carte-corps {
-    padding: 20px;
+  .registre-ligne {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .registre-lieu {
+    grid-column: 1;
+  }
+
+  .carte-contact {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contact-lien,
+  .contact-valeur {
+    text-align: left;
   }
 }
