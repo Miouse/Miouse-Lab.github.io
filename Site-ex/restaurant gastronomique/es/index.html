@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Lumière — Alta Gastronomía en Lyon | Chef Antoine Reverdy · 1 Estrella</title>
+  <meta name="description" content="Maison Lumière, restaurante gastronómico confidencial de 28 cubiertos en el Viejo Lyon. Cocina de autor por el Chef Antoine Reverdy, 1 estrella Michelin.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- Encabezado editorial fijo -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Inicio">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Estrella Michelin</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html" class="active">Inicio</a></li>
+          <li class="nav-item"><a href="chef.html">El Chef</a></li>
+          <li class="nav-item"><a href="menu.html">La Carta</a></li>
+          <li class="nav-item"><a href="galerie.html">Galería</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservas</a></li>
+        </ul>
+
+        <!-- Selector discreto de idioma en esquina -->
+        <div class="lang-corner" aria-label="Seleccionar idioma">
+          <a href="../fr/index.html" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/index.html" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="index.html" class="active" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menú móvil a pantalla completa -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">01. Inicio</a></li>
+        <li><a href="chef.html">02. El Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. Carta Impresa &amp; Menús</a></li>
+        <li><a href="galerie.html">04. Galería Fotográfica</a></li>
+        <li><a href="reservation.html">05. Reservas (28 Cubiertos)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="../fr/index.html">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/index.html">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="index.html" class="active">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visor principal 100vh estricto en cuadrícula asimétrica de 12 columnas -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Columnas 1 a 5: Titular, manifiesto y pestañas cero-scroll -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 5; padding: 2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">01</span>
+              <span>Introducción · Mesa de Autor</span>
+            </div>
+            
+            <h1 class="editorial-title-huge">
+              La pureza y el fuego, <em>28 cubiertos</em> en Lyon.
+            </h1>
+            
+            <p class="lead-p">
+              Una estrella Michelin, veintiocho sillas de nogal y una cocina silenciosa. El chef Antoine Reverdy despoja la tradición lionesa de excesos para conservar únicamente la savia del producto, los jugos reducidos con maestría y el producto salvaje.
+            </p>
+          </div>
+
+          <!-- Pestañas cero-scroll -->
+          <div style="display: flex; flex-direction: column; flex: 1; justify-content: flex-end; margin-top: 1rem;">
+            <div class="tab-strip" data-tabs="home-tabs-es">
+              <button class="tab-trigger active" data-target="pane-service-es">01. Servicio &amp; Espacio</button>
+              <button class="tab-trigger" data-target="pane-avis-es">02. Testimonios</button>
+              <button class="tab-trigger" data-target="pane-terroir-es">03. Origen Artesanal</button>
+            </div>
+
+            <div class="tab-panel-container" data-tab-group="home-tabs-es" style="min-height: 120px;">
+              <!-- Pane Servicio -->
+              <div id="pane-service-es" class="tab-pane active">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div>
+                    <span class="caption-editorial">Horarios de Apertura</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                      <strong>Cena:</strong> Mar &ndash; Sáb (19:45 &ndash; 21:15)<br>
+                      <strong>Almuerzo:</strong> Vie &ndash; Sáb (12:15 &ndash; 13:30)<br>
+                      <em>Cerrado domingo y lunes</em>
+                    </p>
+                  </div>
+                  <div>
+                    <span class="caption-editorial">Dirección &amp; Barrio</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                      14, Rue Saint-Jean, 69005 Lyon<br>
+                      Metro Vieux Lyon (a 2 min)<br>
+                      Aparcacoches disponible por la noche
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pane Testimonios -->
+              <div id="pane-avis-es" class="tab-pane">
+                <div class="review-item" style="margin-bottom: 0;">
+                  <p class="review-quote">«La quenelle contemporánea de lucio alpino posee una ligereza memorable. Precisión milimétrica en un refugio sereno.»</p>
+                  <p class="review-author">Laurent Veyron, <span>encuadernador de arte, Lyon 2º</span></p>
+                </div>
+              </div>
+
+              <!-- Pane Origen -->
+              <div id="pane-terroir-es" class="tab-pane">
+                <p style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-muted);">
+                  Hortalizas biológicas del valle de Garon, truchas y salvelinos de pesca artesanal en lagos alpinos, aves de Bresse de criadores independientes y vinos biodinámicos del Ródano.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 1.2rem;">
+              <a href="reservation.html" class="btn-editorial btn-solid-brick">Reservar mesa</a>
+              <a href="menu.html" class="btn-editorial">Consultar la carta</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Columnas 6 a 9 : Composición visual (fotografía del salón) -->
+        <section class="col-border-r col-mobile-hidden" style="grid-column: span 4; position: relative; background: var(--bg-paper-tint); overflow: hidden;">
+          <img src="../assets/images/salle_lyon.jpg" alt="Salón histórico de Maison Lumière en Lyon" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div class="gal-caption-bar">
+            <span><strong class="gal-num">N° 01</strong> Salón renacentista para 28 comensales</span>
+            <span style="color: var(--ink-light); font-size: 0.62rem;">Viejo Lyon Saint-Jean</span>
+          </div>
+        </section>
+
+        <!-- Columnas 10 a 12 : Registro Michelin y capacidad exclusiva -->
+        <section class="col-mobile-hidden" style="grid-column: span 3; padding: 2rem 1.8rem; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-paper);">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">02</span>
+              <span>Cuaderno de Bitácora</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-solid); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Guía Michelin · Edición 2024</span>
+              <h2 style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; margin: 0.4rem 0 0.6rem 0; color: var(--ink-black);">
+                Una Estrella Concedida
+              </h2>
+              <p style="font-size: 0.8rem; color: var(--ink-muted); line-height: 1.5;">
+                «Antoine Reverdy consolida una voz propia: cocciones medidas al segundo, salsas cristalinas y un salón íntimo de 28 cubiertos que garantiza un cuidado sin fisuras.»
+              </p>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+              <span class="caption-editorial">Aforo Exclusivo</span>
+              <p style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--brick-red); line-height: 1.1; margin: 0.3rem 0;">
+                28 Cubiertos
+              </p>
+              <p style="font-size: 0.78rem; color: var(--ink-muted);">
+                Sin doblar turnos. La mesa le pertenece enteramente para disfrutar con sosiego de su comida o cena.
+              </p>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+            <a href="chef.html" class="btn-editorial" style="width: 100%;">Conocer al Chef Reverdy &rarr;</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Cinta de pie de página -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">1 Estrella Michelin</span>
+        <span>28 Cubiertos · Cocina de Autor</span>
+        <span class="col-mobile-hidden">14 Rue Saint-Jean, 69005 Lyon</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>«La sencillez es el punto culminante de la claridad.»</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

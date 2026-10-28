@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rythme — Suivi d'habitudes minimaliste</title>
+  <meta http-equiv="refresh" content="0; url=fr/">
+  <script>
+    (function() {
+      var userLang = (navigator.languages && navigator.languages[0]) || navigator.language || 'fr';
+      userLang = userLang.toLowerCase();
+      if (userLang.indexOf('es') === 0) {
+        window.location.replace('es/');
+      } else if (userLang.indexOf('en') === 0) {
+        window.location.replace('en/');
+      } else {
+        window.location.replace('fr/');
+      }
+    })();
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=JetBrains+Mono:wght@600;700&display=swap');
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #08090a;
+      color: #f3f4f6;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: #0e1013;
+      padding: 24px 28px;
+      border-radius: 4px;
+      border: 1px solid #22262d;
+      max-width: 360px;
+      width: 100%;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .pip {
+      width: 8px;
+      height: 8px;
+      background: #c6f135;
+      border-radius: 2px;
+    }
+    h1 {
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    p {
+      color: #8b949e;
+      margin-bottom: 18px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .links {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+    a {
+      text-decoration: none;
+      color: #f3f4f6;
+      background: #13161a;
+      border: 1px solid #22262d;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      transition: background 0.1s, border-color 0.1s;
+    }
+    a:hover {
+      background: #181c22;
+      border-color: #c6f135;
+      color: #c6f135;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand-wrap">
+      <div class="pip"></div>
+      <h1>Rythme</h1>
+    </div>
+    <p>Redirection vers votre version linguistique...</p>
+    <div class="links">
+      <a href="fr/">FR</a>
+      <a href="en/">EN</a>
+      <a href="es/">ES</a>
+    </div>
+  </div>
+</body>
+</html>

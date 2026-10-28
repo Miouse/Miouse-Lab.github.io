@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Lumière — Fine Dining in Lyon | Chef Antoine Reverdy · 1 Michelin Star</title>
+  <meta name="description" content="Maison Lumière, an intimate 28-seat gastronomic restaurant in Old Lyon. Contemporary signature cuisine by Chef Antoine Reverdy, 1 Michelin Star.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- Fixed editorial header -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Home">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Michelin Star</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+          <li class="nav-item"><a href="chef.html">The Chef</a></li>
+          <li class="nav-item"><a href="menu.html">The Menu</a></li>
+          <li class="nav-item"><a href="galerie.html">Gallery</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservations</a></li>
+        </ul>
+
+        <!-- Discrete corner language selector -->
+        <div class="lang-corner" aria-label="Select language">
+          <a href="../fr/index.html" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="index.html" class="active" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/index.html" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Full-screen mobile menu -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">01. Home</a></li>
+        <li><a href="chef.html">02. Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. Printed Carte &amp; Menus</a></li>
+        <li><a href="galerie.html">04. Photographic Gallery</a></li>
+        <li><a href="reservation.html">05. Reservations (28 Seats)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="../fr/index.html">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="index.html" class="active">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/index.html">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main 100vh viewport with asymmetric 12-column grid -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Columns 1 to 5: Headline, statement & zero-scroll tabs -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 5; padding: 2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">01</span>
+              <span>Introduction · Intimate Fine Dining</span>
+            </div>
+            
+            <h1 class="editorial-title-huge">
+              Clarity and fire, <em>28 seats</em> in historic Lyon.
+            </h1>
+            
+            <p class="lead-p">
+              One Michelin star, twenty-eight walnut chairs, and an exacting philosophy. Chef Antoine Reverdy distills the storied gastronomy of Lyon down to its purest essence: pristine local ingredients, razor-sharp cooking times, and uncompromising sauces.
+            </p>
+          </div>
+
+          <!-- Zero-scroll tabbed module -->
+          <div style="display: flex; flex-direction: column; flex: 1; justify-content: flex-end; margin-top: 1rem;">
+            <div class="tab-strip" data-tabs="home-tabs-en">
+              <button class="tab-trigger active" data-target="pane-service-en">01. Hours &amp; Service</button>
+              <button class="tab-trigger" data-target="pane-avis-en">02. Guest Reviews</button>
+              <button class="tab-trigger" data-target="pane-terroir-en">03. Provenance</button>
+            </div>
+
+            <div class="tab-panel-container" data-tab-group="home-tabs-en" style="min-height: 120px;">
+              <!-- Pane Service -->
+              <div id="pane-service-en" class="tab-pane active">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div>
+                    <span class="caption-editorial">Opening Hours</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                      <strong>Dinner:</strong> Tue &ndash; Sat (19:45 &ndash; 21:15)<br>
+                      <strong>Lunch:</strong> Fri &ndash; Sat (12:15 &ndash; 13:30)<br>
+                      <em>Closed Sunday &amp; Monday</em>
+                    </p>
+                  </div>
+                  <div>
+                    <span class="caption-editorial">Address &amp; Location</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                      14, Rue Saint-Jean, 69005 Lyon<br>
+                      Vieux Lyon Metro Station (2 min)<br>
+                      Valet service for dinner guests
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pane Reviews -->
+              <div id="pane-avis-en" class="tab-pane">
+                <div class="review-item" style="margin-bottom: 0;">
+                  <p class="review-quote">“The lake pike quenelle reimagined by Antoine is weightless yet intense. Clockwork precision in a serene sanctuary.”</p>
+                  <p class="review-author">Laurent Veyron, <span>art bookbinder, Lyon 2nd</span></p>
+                </div>
+              </div>
+
+              <!-- Pane Terroirs -->
+              <div id="pane-terroir-en" class="tab-pane">
+                <p style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-muted);">
+                  Organic micro-farming from the Garon valley, wild arctic char harvested from Alpine lakes, free-range poultry from independent Bresse breeders, and low-intervention Rhône wines.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 1.2rem;">
+              <a href="reservation.html" class="btn-editorial btn-solid-brick">Reserve a table</a>
+              <a href="menu.html" class="btn-editorial">Read the carte</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Columns 6 to 9: Photography frame -->
+        <section class="col-border-r col-mobile-hidden" style="grid-column: span 4; position: relative; background: var(--bg-paper-tint); overflow: hidden;">
+          <img src="../assets/images/salle_lyon.jpg" alt="Dining room of Maison Lumière in Lyon" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div class="gal-caption-bar">
+            <span><strong class="gal-num">N° 01</strong> 16th-century arched dining salon</span>
+            <span style="color: var(--ink-light); font-size: 0.62rem;">28 Seats · Old Lyon</span>
+          </div>
+        </section>
+
+        <!-- Columns 10 to 12: Michelin record & capacity statement -->
+        <section class="col-mobile-hidden" style="grid-column: span 3; padding: 2rem 1.8rem; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-paper);">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">02</span>
+              <span>Editorial Journal</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-solid); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Michelin Guide · 2024 Edition</span>
+              <h2 style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; margin: 0.4rem 0 0.6rem 0; color: var(--ink-black);">
+                One Star Awarded
+              </h2>
+              <p style="font-size: 0.8rem; color: var(--ink-muted); line-height: 1.5;">
+                “Antoine Reverdy champions quiet mastery: concise sauces, impeccably timed heat, and an intimate dining room allowing flawless execution for every guest.”
+              </p>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+              <span class="caption-editorial">Deliberate Capacity</span>
+              <p style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--brick-red); line-height: 1.1; margin: 0.3rem 0;">
+                28 Seats Only
+              </p>
+              <p style="font-size: 0.78rem; color: var(--ink-muted);">
+                No second turnings. The table remains exclusively yours for the entirety of your lunch or dinner.
+              </p>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+            <a href="chef.html" class="btn-editorial" style="width: 100%;">Meet Chef Reverdy &rarr;</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer ticker -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">1 Michelin Star</span>
+        <span>28 Covers · Signature French Cuisine</span>
+        <span class="col-mobile-hidden">14 Rue Saint-Jean, 69005 Lyon</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>“Simplicity is the arrival point of clarity.”</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Lumière — Lyon · Restaurant Gastronomique | 1 Étoile Michelin</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gateway-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      height: 100dvh;
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--bg-paper);
+      color: var(--ink-black);
+      position: relative;
+    }
+    .gateway-folio {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brick-red);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .gateway-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      color: var(--ink-black);
+    }
+    .gateway-title em {
+      font-style: italic;
+      color: var(--brick-red);
+      font-weight: 400;
+    }
+    .gateway-subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 2.8rem;
+      border-top: 1px solid var(--rule-hairline);
+      border-bottom: 1px solid var(--rule-hairline);
+      padding: 0.6rem 1.4rem;
+    }
+    .gateway-languages {
+      display: flex;
+      gap: 1.2rem;
+    }
+  </style>
+  <script>
+    (function() {
+      var lang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+      if (lang.indexOf('es') === 0) {
+        window.location.replace('es/index.html');
+      } else if (lang.indexOf('en') === 0) {
+        window.location.replace('en/index.html');
+      } else {
+        window.location.replace('fr/index.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="gateway-frame page-sweep-in">
+    <div class="gateway-folio">N° 14 · Rue Saint-Jean · Vieux Lyon</div>
+    <h1 class="gateway-title">Maison <em>Lumière</em></h1>
+    <div class="gateway-subtitle">Haute Gastronomie · Chef Antoine Reverdy · 1 Étoile Michelin · 28 Couverts</div>
+    <div class="gateway-languages">
+      <a href="fr/index.html" class="btn-editorial btn-solid-brick">Français</a>
+      <a href="en/index.html" class="btn-editorial">English</a>
+      <a href="es/index.html" class="btn-editorial">Español</a>
+    </div>
+  </div>
+</body>
+</html>

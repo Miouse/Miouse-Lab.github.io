@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Carte Imprimée — Maison Lumière Lyon | Menu de Saison &amp; Dégustation</title>
+  <meta name="description" content="Consultez la carte imprimée de Maison Lumière à Lyon : poissons de lac, pigeonneau de la Drôme, quenelle contemporaine et Menu Quintessence en 7 services.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- En-tête éditorial fixe -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Accueil">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Étoile Michelin</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html">Accueil</a></li>
+          <li class="nav-item"><a href="chef.html">Le Chef</a></li>
+          <li class="nav-item"><a href="menu.html" class="active">La Carte</a></li>
+          <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+          <li class="nav-item"><a href="reservation.html">Réservation</a></li>
+        </ul>
+
+        <!-- Sélecteur de langue discret en coin -->
+        <div class="lang-corner" aria-label="Choix de la langue">
+          <a href="menu.html" class="active" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/menu.html" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/menu.html" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menu mobile plein écran -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">01. Accueil</a></li>
+        <li><a href="chef.html">02. Le Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html" class="active">03. La Carte &amp; Menus</a></li>
+        <li><a href="galerie.html">04. Galerie Photographique</a></li>
+        <li><a href="reservation.html">05. Réservation (28 Couverts)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="menu.html" class="active">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/menu.html">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/menu.html">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteneur principal 100vh strict en grille asymétrique -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Colonnes 1 à 4 : Titre éditorial, choix des chapitres et contexte -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 4; padding: 2.2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">03</span>
+              <span>La Carte Imprimée · Automne-Hiver</span>
+            </div>
+
+            <h1 class="editorial-title-lg">
+              Le goût du brut <em>et de l'instant</em>.
+            </h1>
+
+            <p class="lead-p">
+              Une partition volontairement courte, réécrite toutes les trois semaines au gré des arrivages paysans et de la pêche douce alpine. Ici, point de superflus : le feu, la justesse du sel, l'acidité vivante.
+            </p>
+
+            <!-- Navigation par onglets de la carte -->
+            <div class="tab-strip" data-tabs="menu-tabs" style="flex-direction: column; border-bottom: none; gap: 0.3rem; margin-top: 1.5rem;">
+              <button class="tab-trigger active" data-target="tab-entrees" style="border-left: 2px solid transparent; border-bottom: none; padding: 0.6rem 0.8rem;">
+                &mdash; 01. Entrées de Saison
+              </button>
+              <button class="tab-trigger" data-target="tab-plats" style="border-left: 2px solid transparent; border-bottom: none; padding: 0.6rem 0.8rem;">
+                &mdash; 02. Poissons de Lac &amp; Viandes
+              </button>
+              <button class="tab-trigger" data-target="tab-desserts" style="border-left: 2px solid transparent; border-bottom: none; padding: 0.6rem 0.8rem;">
+                &mdash; 03. Fromages &amp; Douceurs
+              </button>
+              <button class="tab-trigger" data-target="tab-degustation" style="border-left: 2px solid transparent; border-bottom: none; padding: 0.6rem 0.8rem;">
+                &mdash; 04. Menu Quintessence (7 Services)
+              </button>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.2rem;">
+            <p class="caption-editorial" style="margin-bottom: 0.8rem;">
+              Pain au levain pétri sur place · Beurre baratté de Bresse
+            </p>
+            <a href="reservation.html" class="btn-editorial btn-solid-brick" style="width: 100%;">
+              Réserver pour ce service
+            </a>
+          </div>
+        </section>
+
+        <!-- Colonnes 5 à 12 : Feuille de menu imprimée avec points de conduite -->
+        <section class="col-mobile-full" style="grid-column: span 8; padding: 1.8rem 2.5rem; background-color: var(--bg-paper-tint); display: flex; align-items: center; justify-content: center;">
+          <div class="printed-menu-sheet" style="width: 100%; max-width: 780px;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule-solid); padding-bottom: 0.8rem;">
+              <span class="caption-editorial" style="color: var(--ink-black); font-weight: 600;">Maison Lumière · Lyon</span>
+              <span class="caption-editorial" style="color: var(--brick-red); font-weight: 600;">Feuille du Jour · 28 Couverts</span>
+            </div>
+
+            <div class="tab-panel-container" data-tab-group="menu-tabs" style="margin: 1.2rem 0; flex: 1;">
+              
+              <!-- ONGLET 01 : ENTRÉES -->
+              <div id="tab-entrees" class="tab-pane active">
+                <div class="menu-items-list">
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Quenelle Contemporaine au Brochet du Léman</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">38 €</span>
+                    </div>
+                    <p class="dish-description">Texture aérienne soufflée, bisque corsée d'écrevisses à pattes rouges, cardons épineux de Vaulx-en-Velin.</p>
+                    <span class="dish-origin-tag">Origine : Pêche alpine &amp; maraîchage lyonnais</span>
+                  </div>
+
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Foie Gras Poêlé au Vin de Foin &amp; Coings</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">42 €</span>
+                    </div>
+                    <p class="dish-description">Canard fermier des Dombes, coings sauvages confits aux épices douces, brioche feuilletée à la fleur de sel.</p>
+                    <span class="dish-origin-tag">Origine : Élevage artisanal de la Dombes</span>
+                  </div>
+
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Velouté Tiède de Châtaignes Fumées</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">36 €</span>
+                    </div>
+                    <p class="dish-description">Châtaignes d'Ardèche au bois de hêtre, espuma au mascarpone fermier et lamelles de truffe noire d'automne.</p>
+                    <span class="dish-origin-tag">Origine : Monts d'Ardèche &amp; Tricastin</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ONGLET 02 : PLATS -->
+              <div id="tab-plats" class="tab-pane">
+                <div class="menu-items-list">
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Omble Chevalier Cuit à 48°C au Verjus</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">48 €</span>
+                    </div>
+                    <p class="dish-description">Beurre noisette acidulé, purée fine de céleri-rave au foin de montagne, chanterelles dorées au sautoir.</p>
+                    <span class="dish-origin-tag">Origine : Pêche lacustre du Léman</span>
+                  </div>
+
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Pigeon Fermier de la Drôme en Deux Cuissons</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">52 €</span>
+                    </div>
+                    <p class="dish-description">Filet rosé sur le coffre, cuisse confite au genièvre, jus corsé aux mûres sauvages et poivre noir concassé.</p>
+                    <span class="dish-origin-tag">Origine : Drôme des Collines</span>
+                  </div>
+
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Ris de Veau Doré aux Mousserons Sauvages</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">54 €</span>
+                    </div>
+                    <p class="dish-description">Noix de ris croustillante, étuvée d'oignons doux au vin jaune jurassien, émulsion au poivre des cimes.</p>
+                    <span class="dish-origin-tag">Origine : Terroirs du Velay &amp; cueillette</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ONGLET 03 : DESSERTS -->
+              <div id="tab-desserts" class="tab-pane">
+                <div class="menu-items-list">
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Chariot des Chèvres Affinés des Monts</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">20 €</span>
+                    </div>
+                    <p class="dish-description">Ferme des Roches à Messimy, miel brut de châtaignier et tranche de pain de seigle toastée au feu de bois.</p>
+                    <span class="dish-origin-tag">Origine : Monts du Lyonnais</span>
+                  </div>
+
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Poire Conférence au Vin Rouge Épicé</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">22 €</span>
+                    </div>
+                    <p class="dish-description">Pochée lentement au Moulin-à-Vent, sablé croustillant au sarrasin breton et crème glacée tonka.</p>
+                    <span class="dish-origin-tag">Origine : Vergers des bords du Rhône</span>
+                  </div>
+
+                  <div class="dish-row">
+                    <div class="dish-header">
+                      <h3 class="dish-name">Chocolat Guanaja 70% &amp; Pignons Torréfiés</h3>
+                      <div class="leader-dots"></div>
+                      <span class="dish-price">24 €</span>
+                    </div>
+                    <p class="dish-description">Crémeux intense, praliné rustique aux pignons de pin, opaline craquante et cristaux de sel de Guérande.</p>
+                    <span class="dish-origin-tag">Origine : Grand cru d'Amérique du Sud</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ONGLET 04 : MENU DÉGUSTATION -->
+              <div id="tab-degustation" class="tab-pane">
+                <div style="border-left: 2px solid var(--brick-red); padding-left: 1.5rem; margin: 1rem 0;">
+                  <span class="caption-editorial">Expérience Intégrale · 7 Services</span>
+                  <div style="display: flex; align-items: baseline; margin: 0.4rem 0;">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--ink-black);">
+                      Menu Quintessence
+                    </h3>
+                    <div class="leader-dots"></div>
+                    <span class="dish-price">135 €</span>
+                  </div>
+                  <p style="font-size: 0.85rem; color: var(--ink-muted); line-height: 1.5; margin-bottom: 0.8rem;">
+                    Une traversée libre orchestrée par le Chef Antoine Reverdy. Sept étapes guidées par la cueillette du matin, les poissons de lac et les pièces bouchères d'exception. Servi pour l'ensemble des convives de la table.
+                  </p>
+                  <p style="font-size: 0.8rem; color: var(--ink-black);">
+                    <strong>Accord Mets &amp; Vins de Vignerons :</strong> 5 verres de terroirs vivants &mdash; <strong>75 €</strong>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--rule-hairline); padding-top: 0.8rem;">
+              <span class="caption-editorial">Prix nets toutes taxes comprises</span>
+              <span class="caption-editorial" style="color: var(--brick-red);">Chef Antoine Reverdy</span>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Ruban bas de page -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">La Carte</span>
+        <span>Produits Bruts &amp; Sauces d'Auteur</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>« La cuisine, c'est quand les choses ont le goût de ce qu'elles sont. »</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation — Maison Lumière Lyon | Table de 28 Couverts</title>
+  <meta name="description" content="Réservez votre table d'exception chez Maison Lumière à Lyon. 28 couverts par service, cuisine étoilée par le Chef Antoine Reverdy, 14 Rue Saint-Jean.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- En-tête éditorial fixe -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Accueil">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Étoile Michelin</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html">Accueil</a></li>
+          <li class="nav-item"><a href="chef.html">Le Chef</a></li>
+          <li class="nav-item"><a href="menu.html">La Carte</a></li>
+          <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+          <li class="nav-item"><a href="reservation.html" class="active">Réservation</a></li>
+        </ul>
+
+        <!-- Sélecteur de langue discret en coin -->
+        <div class="lang-corner" aria-label="Choix de la langue">
+          <a href="reservation.html" class="active" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/reservation.html" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/reservation.html" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menu mobile plein écran -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">01. Accueil</a></li>
+        <li><a href="chef.html">02. Le Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. La Carte &amp; Menus</a></li>
+        <li><a href="galerie.html">04. Galerie Photographique</a></li>
+        <li><a href="reservation.html" class="active">05. Réservation (28 Couverts)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="reservation.html" class="active">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/reservation.html">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/reservation.html">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteneur principal 100vh strict en grille asymétrique -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Colonnes 1 à 7 : Formulaire de réservation et engagement des 28 couverts -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 7; padding: 2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">05</span>
+              <span>Réservation · Service Intimiste</span>
+            </div>
+
+            <h1 class="editorial-title-lg" style="margin-bottom: 0.4rem;">
+              Vingt-huit couverts, <em>rien de plus</em>.
+            </h1>
+
+            <p class="lead-p" style="margin-bottom: 0.8rem; font-size: 0.85rem;">
+              Pour respecter l'exigence des cuissons à la seconde du chef Antoine Reverdy, la salle n'accueille que 28 convives par service. Aucune double rotation n'est imposée : la table est vôtre pour tout le repas.
+            </p>
+
+            <!-- Formulaire interactif compact -->
+            <form id="bookingForm" class="booking-editorial-grid">
+              <div class="form-field">
+                <label class="form-label" for="resDate">Date souhaitée</label>
+                <input type="date" id="resDate" name="date" class="form-input" required value="2026-11-12">
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resTime">Service &amp; Heure</label>
+                <select id="resTime" name="time" class="form-select" required>
+                  <optgroup label="Dîner (Mardi &ndash; Samedi)">
+                    <option value="19h45">19h45 (Début de service)</option>
+                    <option value="20h15" selected>20h15</option>
+                    <option value="20h45">20h45</option>
+                  </optgroup>
+                  <optgroup label="Déjeuner (Vendredi &ndash; Samedi)">
+                    <option value="12h15">12h15</option>
+                    <option value="12h45">12h45</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resCovers">Nombre de couverts</label>
+                <select id="resCovers" name="covers" class="form-select" required>
+                  <option value="1 convive">1 convive (Au comptoir de cuisine)</option>
+                  <option value="2 convives" selected>2 convives (Table intime)</option>
+                  <option value="3 convives">3 convives</option>
+                  <option value="4 convives">4 convives</option>
+                  <option value="5 convives">5 convives</option>
+                  <option value="6 convives">6 convives (Table d'hôtes en noyer)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resName">Nom complet</label>
+                <input type="text" id="resName" name="name" class="form-input" placeholder="Mme / M. Laurent Veyron" required>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resEmail">Courriel de confirmation</label>
+                <input type="email" id="resEmail" name="email" class="form-input" placeholder="contact@domaine.fr" required>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resPhone">Téléphone mobile</label>
+                <input type="tel" id="resPhone" name="phone" class="form-input" placeholder="+33 6 00 00 00 00" required>
+              </div>
+
+              <div class="form-field full">
+                <label class="form-label" for="resNotes">Allergies ou remarques particulières</label>
+                <input type="text" id="resNotes" name="notes" class="form-input" placeholder="Régime alimentaire, anniversaire, demande d'accord sans alcool...">
+              </div>
+
+              <div class="form-field full" style="margin-top: 0.3rem;">
+                <button type="submit" class="btn-editorial btn-solid-brick" style="width: 100%;">
+                  Confirmer la demande de réservation &rarr;
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 0.6rem;">
+            <span class="caption-editorial">Confirmation immédiate &bull; Annulation sans frais jusqu'à 24h avant le service</span>
+          </div>
+
+          <!-- Fenêtre Modale Éditoriale de Confirmation -->
+          <div id="bookingConfirmationModal" class="editorial-modal" role="dialog" aria-modal="true">
+            <span class="caption-editorial" style="color: var(--brick-red); font-weight: 700; margin-bottom: 0.5rem;">
+              Enregistrement Validé · 28 Couverts
+            </span>
+            <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.8rem; color: var(--ink-black);">
+              Merci, <span class="modal-guest-name"></span>.
+            </h2>
+            <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 0.5rem;">
+              Votre table est réservée chez Maison Lumière.
+            </p>
+            <p class="modal-reservation-details" style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--brick-red); margin-bottom: 1.2rem; border-left: 2px solid var(--brick-red); padding-left: 0.8rem;"></p>
+            <p style="font-size: 0.82rem; color: var(--ink-light); line-height: 1.5; margin-bottom: 1.8rem; max-width: 480px;">
+              Le chef Antoine Reverdy et toute son équipe ont bien pris note de votre venue. Un récapitulatif détaillé vous attend dans votre boîte de messagerie.
+            </p>
+            <button id="closeBookingModal" class="btn-editorial btn-solid-brick" style="padding: 0.6rem 1.8rem;">
+              Retour à la page
+            </button>
+          </div>
+        </section>
+
+        <!-- Colonnes 8 à 12 : Rituels de maison, accès & conciergerie -->
+        <section class="col-mobile-hidden" style="grid-column: span 5; padding: 2rem 2.5rem; background-color: var(--bg-paper-tint); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">02</span>
+              <span>Rituels &amp; Accueil</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-solid); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Adresse &amp; Accès</span>
+              <p style="font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.3rem; line-height: 1.5;">
+                <strong>14, Rue Saint-Jean — 69005 Lyon (Vieux Lyon)</strong><br>
+                À deux pas de la primatiale Saint-Jean.<br>
+                Service de voiturier assuré à partir de 19h30 pour le dîner.<br>
+                Parking public Saint-Jean à 100 mètres.
+              </p>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Horaires &amp; Rythme</span>
+              <p style="font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.3rem; line-height: 1.5;">
+                <strong>Dîner :</strong> Mardi au Samedi, de 19h45 à 23h30<br>
+                <strong>Déjeuner :</strong> Vendredi et Samedi, de 12h15 à 15h00<br>
+                <em>Fermé le Dimanche et Lundi pour le travail de cave et de potager.</em>
+              </p>
+            </div>
+
+            <div class="review-item" style="margin-top: 1rem;">
+              <p class="review-quote">« L'intimité de cette salle est un bien précieux. Le service murmure, la cave impressionne, les plats touchent au cœur. »</p>
+              <p class="review-author">Éléonore Moreau, <span>historienne de l'architecture, Genève</span></p>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+            <span class="caption-editorial">Conciergerie Directe</span>
+            <p style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--ink-black); margin-top: 0.2rem;">
+              +33 (0)4 78 42 18 90
+            </p>
+            <p style="font-size: 0.75rem; color: var(--ink-light);">
+              Courriel : reservation@maisonlumiere-lyon.fr
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Ruban bas de page -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">Réservations Ouvertes</span>
+        <span>28 Couverts par Service · Vieux Lyon</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>« Chaque table est un refuge de silence et de vérité. »</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

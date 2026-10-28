@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Reservation — Maison Lumière Lyon | 28 Seats Fine Dining</title>
+  <meta name="description" content="Reserve your table at Maison Lumière in Lyon. Dedicated 28-seat service, 1-Michelin-star cuisine by Chef Antoine Reverdy, 14 Rue Saint-Jean.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- Fixed editorial header -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Home">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Michelin Star</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="chef.html">The Chef</a></li>
+          <li class="nav-item"><a href="menu.html">The Menu</a></li>
+          <li class="nav-item"><a href="galerie.html">Gallery</a></li>
+          <li class="nav-item"><a href="reservation.html" class="active">Reservations</a></li>
+        </ul>
+
+        <!-- Discrete corner language selector -->
+        <div class="lang-corner" aria-label="Select language">
+          <a href="../fr/reservation.html" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="reservation.html" class="active" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/reservation.html" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">01. Home</a></li>
+        <li><a href="chef.html">02. Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. Printed Carte &amp; Menus</a></li>
+        <li><a href="galerie.html">04. Photographic Gallery</a></li>
+        <li><a href="reservation.html" class="active">05. Reservations (28 Seats)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="../fr/reservation.html">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="reservation.html" class="active">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/reservation.html">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main viewport 100vh strict -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Columns 1 to 7: Reservation form & 28-seat pledge -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 7; padding: 2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">05</span>
+              <span>Reservations · Confidential Sanctuary</span>
+            </div>
+
+            <h1 class="editorial-title-lg" style="margin-bottom: 0.4rem;">
+              Twenty-eight seats, <em>nothing more</em>.
+            </h1>
+
+            <p class="lead-p" style="margin-bottom: 0.8rem; font-size: 0.85rem;">
+              To honor Chef Antoine Reverdy's split-second cooking discipline, each service is restricted strictly to 28 guests. No double seating is ever scheduled; your table is reserved entirely for your comfort.
+            </p>
+
+            <!-- Booking form -->
+            <form id="bookingForm" class="booking-editorial-grid">
+              <div class="form-field">
+                <label class="form-label" for="resDate">Desired Date</label>
+                <input type="date" id="resDate" name="date" class="form-input" required value="2026-11-12">
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resTime">Service &amp; Time</label>
+                <select id="resTime" name="time" class="form-select" required>
+                  <optgroup label="Dinner (Tuesday &ndash; Saturday)">
+                    <option value="19:45">19:45 (Early sitting)</option>
+                    <option value="20:15" selected>20:15</option>
+                    <option value="20:45">20:45</option>
+                  </optgroup>
+                  <optgroup label="Lunch (Friday &ndash; Saturday)">
+                    <option value="12:15">12:15</option>
+                    <option value="12:45">12:45</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resCovers">Party Size</label>
+                <select id="resCovers" name="covers" class="form-select" required>
+                  <option value="1 guest">1 guest (Kitchen counter)</option>
+                  <option value="2 guests" selected>2 guests (Intimate table)</option>
+                  <option value="3 guests">3 guests</option>
+                  <option value="4 guests">4 guests</option>
+                  <option value="5 guests">5 guests</option>
+                  <option value="6 guests">6 guests (Walnut host table)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resName">Full Name</label>
+                <input type="text" id="resName" name="name" class="form-input" placeholder="e.g. Mrs / Mr Laurent Veyron" required>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resEmail">Confirmation Email</label>
+                <input type="email" id="resEmail" name="email" class="form-input" placeholder="contact@domain.com" required>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="resPhone">Mobile Phone</label>
+                <input type="tel" id="resPhone" name="phone" class="form-input" placeholder="+33 6 00 00 00 00" required>
+              </div>
+
+              <div class="form-field full">
+                <label class="form-label" for="resNotes">Dietary preferences &amp; special requests</label>
+                <input type="text" id="resNotes" name="notes" class="form-input" placeholder="Allergies, anniversary celebration, non-alcoholic pairing...">
+              </div>
+
+              <div class="form-field full" style="margin-top: 0.3rem;">
+                <button type="submit" class="btn-editorial btn-solid-brick" style="width: 100%;">
+                  Confirm reservation request &rarr;
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 0.6rem;">
+            <span class="caption-editorial">Immediate confirmation &bull; Complimentary cancellation up to 24h prior to service</span>
+          </div>
+
+          <!-- Editorial modal confirmation -->
+          <div id="bookingConfirmationModal" class="editorial-modal" role="dialog" aria-modal="true">
+            <span class="caption-editorial" style="color: var(--brick-red); font-weight: 700; margin-bottom: 0.5rem;">
+              Booking Confirmed · 28-Seat Service
+            </span>
+            <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.8rem; color: var(--ink-black);">
+              Thank you, <span class="modal-guest-name"></span>.
+            </h2>
+            <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 0.5rem;">
+              Your table is secured at Maison Lumière.
+            </p>
+            <p class="modal-reservation-details" style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--brick-red); margin-bottom: 1.2rem; border-left: 2px solid var(--brick-red); padding-left: 0.8rem;"></p>
+            <p style="font-size: 0.82rem; color: var(--ink-light); line-height: 1.5; margin-bottom: 1.8rem; max-width: 480px;">
+              Chef Antoine Reverdy and the team look forward to hosting you at 14 Rue Saint-Jean in Old Lyon. An overview has been sent to your email.
+            </p>
+            <button id="closeBookingModal" class="btn-editorial btn-solid-brick" style="padding: 0.6rem 1.8rem;">
+              Back to page
+            </button>
+          </div>
+        </section>
+
+        <!-- Columns 8 to 12: House protocol & concierge -->
+        <section class="col-mobile-hidden" style="grid-column: span 5; padding: 2rem 2.5rem; background-color: var(--bg-paper-tint); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">02</span>
+              <span>Sanctuary &amp; Location</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-solid); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Address &amp; Arrival</span>
+              <p style="font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.3rem; line-height: 1.5;">
+                <strong>14, Rue Saint-Jean — 69005 Lyon (Old Lyon)</strong><br>
+                Steps from Saint-Jean Cathedral.<br>
+                Complimentary valet service available for dinner from 19:30.<br>
+                Saint-Jean underground parking within 100 meters.
+              </p>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Pace &amp; Atmosphere</span>
+              <p style="font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.3rem; line-height: 1.5;">
+                <strong>Dinner:</strong> Tuesday to Saturday, from 19:45 to 23:30<br>
+                <strong>Lunch:</strong> Friday and Saturday, from 12:15 to 15:00<br>
+                <em>Closed Sunday and Monday for cellar sourcing and garden harvesting.</em>
+              </p>
+            </div>
+
+            <div class="review-item" style="margin-top: 1rem;">
+              <p class="review-quote">“The feeling of being welcomed by refined friends who cook with exquisite genius. Unhurried, poetic, memorable.”</p>
+              <p class="review-author">Éléonore Moreau, <span>architectural historian, Geneva</span></p>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+            <span class="caption-editorial">Direct Concierge</span>
+            <p style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--ink-black); margin-top: 0.2rem;">
+              +33 (0)4 78 42 18 90
+            </p>
+            <p style="font-size: 0.75rem; color: var(--ink-light);">
+              Email: reservation@maisonlumiere-lyon.fr
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer ticker -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">Bookings Open</span>
+        <span>28 Covers per Service · Old Lyon</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>“Every table is a sanctuary of quietude and truth.”</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

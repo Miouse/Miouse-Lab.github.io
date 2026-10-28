@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>FOKUS — Débarrasse-toi du bruit. Travaille en profondeur.</title>
+  <meta name="description" content="Application de concentration radicale qui neutralise les distractions au niveau système et verrouille vos sessions de deep work.">
+  
+  <!-- Typographie Swiss / Brutaliste : Anton (Titres massifs condensés) & Space Mono (Données techniques) & Archivo Narrow -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,600;0,700;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll-root theme-swiss">
+
+  <!-- FRAME TECHNIQUE GLOBALE (Grille apparente & 100vh rigide) -->
+  <div class="app-viewport" id="appViewport">
+
+    <!-- BARRE SUPÉRIEURE : NAVIGATION & SÉLECTEUR DE LANGUE -->
+    <header class="app-header">
+      <div class="header-brand">
+        <a href="#accueil" class="brand-link" data-nav="accueil">
+          <span class="brand-logo-square"></span>
+          <span class="brand-name">FOKUS</span>
+          <span class="brand-sub">SYS//4.0</span>
+        </a>
+      </div>
+
+      <!-- Navigation 5 pages -->
+      <nav class="header-nav" aria-label="Navigation principale">
+        <button type="button" class="nav-item is-active" data-page="accueil" id="nav-accueil">
+          <span class="nav-num">01</span><span class="nav-label" data-i18n="nav_home">ACCUEIL</span>
+        </button>
+        <button type="button" class="nav-item" data-page="fonctionnalites" id="nav-fonctionnalites">
+          <span class="nav-num">02</span><span class="nav-label" data-i18n="nav_features">FONCTIONS</span>
+        </button>
+        <button type="button" class="nav-item" data-page="tarifs" id="nav-tarifs">
+          <span class="nav-num">03</span><span class="nav-label" data-i18n="nav_pricing">TARIFS</span>
+        </button>
+        <button type="button" class="nav-item" data-page="faq" id="nav-faq">
+          <span class="nav-num">04</span><span class="nav-label" data-i18n="nav_faq">FAQ</span>
+        </button>
+        <button type="button" class="nav-item" data-page="contact" id="nav-contact">
+          <span class="nav-num">05</span><span class="nav-label" data-i18n="nav_contact">CONTACT</span>
+        </button>
+      </nav>
+
+      <!-- Sélecteur multilingue FR | EN | ES -->
+      <div class="lang-selector" aria-label="Changer de langue">
+        <button type="button" class="lang-btn is-active" data-lang="fr" aria-label="Version Française">FR</button>
+        <span class="lang-separator">/</span>
+        <button type="button" class="lang-btn" data-lang="en" aria-label="English Version">EN</button>
+        <span class="lang-separator">/</span>
+        <button type="button" class="lang-btn" data-lang="es" aria-label="Versión Española">ES</button>
+      </div>
+
+      <!-- CTA rapide d'action dans le header -->
+      <div class="header-action">
+        <button type="button" class="btn-safety-header" id="quickStartBtn" data-i18n="header_cta">
+          ACTIVER LE PROTOCOLE
+        </button>
+      </div>
+    </header>
+
+    <!-- ZONE DE CONTENU PRINCIPAL (100% sans défilement, commutateur de vue) -->
+    <main class="page-container" id="pageContainer">
+
+      <!-- ================= PAGE 01 : ACCUEIL ================= -->
+      <section class="page-view is-active" id="view-accueil" data-view="accueil">
+        <div class="home-grid">
+          
+          <!-- Colonne gauche : Titre colossal, Manifeste, Statut du système -->
+          <div class="home-left">
+            <div class="home-meta-bar">
+              <span class="badge-tag" data-i18n="home_tag">DISTRACTION ZERO // KERNEL-BLOCK</span>
+              <span class="live-pulse-container">
+                <span class="live-dot"></span>
+                <span class="live-text" data-i18n="home_live">24 819 SESSIONS ACTIVES</span>
+              </span>
+            </div>
+
+            <h1 class="home-massive-title" data-i18n="home_title">
+              DÉTRUIS LE BRUIT.<br>RETROUVE TON FLUX.
+            </h1>
+
+            <p class="home-lead" data-i18n="home_lead">
+              Les applications de concentration habituelles t'envoient des notifications pour méditer. Fokus verrouille tes apps distrayantes au niveau système et t'empêche de les contourner. Pas de seconde chance. Juste ton travail.
+            </p>
+
+            <div class="home-actions-row">
+              <button type="button" class="btn-safety-massive" id="homeMainCta" data-i18n="home_cta">
+                INSTALLER FOKUS &rarr;
+              </button>
+              <button type="button" class="btn-outline-massive" id="homeExploreFeatures" data-page="fonctionnalites">
+                <span data-i18n="home_secondary">ANALYSER L'ARCHITECTURE</span>
+              </button>
+            </div>
+
+            <!-- Télémétrie brute en pied de section -->
+            <div class="home-telemetry-grid">
+              <div class="telemetry-cell">
+                <span class="tel-label" data-i18n="home_stat1_label">TEMPS SAUVÉ / JOUR</span>
+                <span class="tel-val">3h 12m</span>
+              </div>
+              <div class="telemetry-cell">
+                <span class="tel-label" data-i18n="home_stat2_label">BYPASS TOLÉRÉS</span>
+                <span class="tel-val text-safety">0.00%</span>
+              </div>
+              <div class="telemetry-cell">
+                <span class="tel-label" data-i18n="home_stat3_label">IMPACT NEURO</span>
+                <span class="tel-val">+184% FLUX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne droite : Mockup téléphone réaliste CSS, incliné et interactif -->
+          <div class="home-right">
+            <div class="phone-stage">
+              
+              <!-- Badge indicateur d'angle / Swiss mark -->
+              <div class="stage-watermark">FIG. 01 — RUNTIME DISPLAY</div>
+
+              <!-- Smartphone réaliste en CSS brut -->
+              <div class="css-phone" id="interactivePhone">
+                <div class="phone-case">
+                  <div class="phone-notch">
+                    <span class="speaker-pill"></span>
+                    <span class="lens-dot"></span>
+                  </div>
+                  
+                  <!-- Écran de l'app Fokus -->
+                  <div class="phone-screen">
+                    <div class="app-ui-header">
+                      <span class="app-ui-time" id="phoneClock">09:41</span>
+                      <span class="app-ui-status">SHIELD: ACTIVE</span>
+                    </div>
+
+                    <div class="app-ui-body">
+                      <div class="app-mode-tag" data-i18n="phone_mode">BLOCAGE RADICAL // EN COURS</div>
+                      
+                      <!-- Grand chronomètre de session -->
+                      <div class="app-timer-display" id="appTimerDisplay">42:18</div>
+                      <div class="app-timer-sub" data-i18n="phone_session_label">SESSION ULTRADIENNE : ÉCRITURE SYSTÈME</div>
+
+                      <!-- Barre de progression segmentée -->
+                      <div class="app-progress-bar">
+                        <div class="app-progress-fill" style="width: 68%;"></div>
+                      </div>
+
+                      <!-- Liste des applications séquestrées -->
+                      <div class="phone-blocked-apps">
+                        <div class="blocked-header">
+                          <span data-i18n="phone_blocked_count">47 APPS QUARANTAINÉES</span>
+                          <span class="locked-icon">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                          </span>
+                        </div>
+                        <div class="blocked-tags-row">
+                          <span class="blocked-badge">INSTAGRAM [OFF]</span>
+                          <span class="blocked-badge">YOUTUBE [OFF]</span>
+                          <span class="blocked-badge">TWITTER/X [OFF]</span>
+                          <span class="blocked-badge">TIKTOK [OFF]</span>
+                        </div>
+                      </div>
+
+                      <!-- Contrôle interactif dans le téléphone -->
+                      <div class="phone-action-area">
+                        <button type="button" class="phone-btn-danger" id="phoneEmergencyBtn" data-i18n="phone_emergency">
+                          AUCUNE SORTIE POSSIBLE
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Boutons physiques matériels -->
+                  <div class="phone-hw-button vol-up"></div>
+                  <div class="phone-hw-button vol-down"></div>
+                  <div class="phone-hw-button power"></div>
+                </div>
+              </div>
+
+              <!-- Légende technique sous le mockup -->
+              <div class="phone-caption">
+                <span class="caption-index">[SPEC // D2-44]</span>
+                <span class="caption-text" data-i18n="phone_caption">VERROUILLAGE SANS DÉTOURNEMENT POSSIBLE. REDÉMARRAGE INUTILE.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PAGE 02 : FONCTIONNALITÉS ================= -->
+      <section class="page-view" id="view-fonctionnalites" data-view="fonctionnalites">
+        <div class="features-layout">
+          
+          <div class="section-lead-strip">
+            <div class="lead-col-title">
+              <span class="section-num">02 // SPECIFICATIONS</span>
+              <h2 class="massive-section-title" data-i18n="features_title">ARCHITECTURE SANS CONCESSION.</h2>
+            </div>
+            <div class="lead-col-meta">
+              <span class="lead-badge" data-i18n="features_tag">05 MODULES OPÉRATIONNELS</span>
+              <p class="lead-mini-desc" data-i18n="features_sub">Chaque ligne représente un verrou technique conçu pour écraser la dépendance cognitive.</p>
+            </div>
+          </div>
+
+          <!-- Mobile sub-tabs pour respecter l'interdiction de scroll -->
+          <div class="mobile-tabs-bar" id="featuresMobileTabs">
+            <button type="button" class="m-tab-btn is-active" data-ftab="0">01 NOYAU</button>
+            <button type="button" class="m-tab-btn" data-ftab="1">02 CYCLES</button>
+            <button type="button" class="m-tab-btn" data-ftab="2">03 ERRANCE</button>
+            <button type="button" class="m-tab-btn" data-ftab="3">04 DATA</button>
+            <button type="button" class="m-tab-btn" data-ftab="4">05 ÉQUIPE</button>
+          </div>
+
+          <!-- Liste pleine largeur en lignes qui se déploient au survol -->
+          <div class="features-accordion-list" id="featuresList">
+            
+            <!-- Ligne 01 -->
+            <div class="feature-row is-expanded" data-index="0">
+              <div class="feature-row-header">
+                <span class="ft-num">01</span>
+                <h3 class="ft-name" data-i18n="ft1_name">SÉQUESTRATION NIVEAU SYSTÈME</h3>
+                <span class="ft-type" data-i18n="ft1_type">HARDWARE SHIELD</span>
+                <span class="ft-arrow">+</span>
+              </div>
+              <div class="feature-row-content">
+                <div class="ft-detail-grid">
+                  <p class="ft-desc" data-i18n="ft1_desc">
+                    Fokus intercepte les sockets réseau et bloque les processus ciblés. Même modifier l'horloge système ou supprimer l'application en cours de session est rendu impossible par le profil superviseur.
+                  </p>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft1_m_label">RÉSISTANCE AU BYPASS</span>
+                    <span class="ft-metric-val">100.0%</span>
+                  </div>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft1_m_label2">LATENCE D'INTERCEPTION</span>
+                    <span class="ft-metric-val">&lt; 0.4 ms</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ligne 02 -->
+            <div class="feature-row" data-index="1">
+              <div class="feature-row-header">
+                <span class="ft-num">02</span>
+                <h3 class="ft-name" data-i18n="ft2_name">SPRINTS ULTRADIENS SYNCHRONISÉS</h3>
+                <span class="ft-type" data-i18n="ft2_type">BIORHYTHM SYNC</span>
+                <span class="ft-arrow">+</span>
+              </div>
+              <div class="feature-row-content">
+                <div class="ft-detail-grid">
+                  <p class="ft-desc" data-i18n="ft2_desc">
+                    Oublie les minuteurs rigides de 25 minutes. Fokus calibre la durée de tes sessions selon tes cycles ultradiens naturels (de 50 à 90 minutes) et impose de vraies pauses sans écran pour restaurer l'adénosine.
+                  </p>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft2_m_label">DURÉE STANDARD</span>
+                    <span class="ft-metric-val">90 MIN</span>
+                  </div>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft2_m_label2">PAUSE FORCÉE</span>
+                    <span class="ft-metric-val">15 MIN BLACKOUT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ligne 03 -->
+            <div class="feature-row" data-index="2">
+              <div class="feature-row-header">
+                <span class="ft-num">03</span>
+                <h3 class="ft-name" data-i18n="ft3_name">INTERCEPTEUR D'ERRANCE COMPULSIVE</h3>
+                <span class="ft-type" data-i18n="ft3_type">ANTI-DOOMSCROLL</span>
+                <span class="ft-arrow">+</span>
+              </div>
+              <div class="feature-row-content">
+                <div class="ft-detail-grid">
+                  <p class="ft-desc" data-i18n="ft3_desc">
+                    Détection en direct de l'ouverture convulsive de nouveaux onglets, du rafraîchissement d'emails et des micro-fuites d'attention. L'écran passe en négatif pendant 3 secondes dès qu'un réflexe distrayant s'amorce.
+                  </p>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft3_m_label">MICRO-DÉRIVES ÉVITÉES</span>
+                    <span class="ft-metric-val">~42 / JOUR</span>
+                  </div>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft3_m_label2">SIGNAL DE RAPPEL</span>
+                    <span class="ft-metric-val">HAPTIQUE FLASH</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ligne 04 -->
+            <div class="feature-row" data-index="3">
+              <div class="feature-row-header">
+                <span class="ft-num">04</span>
+                <h3 class="ft-name" data-i18n="ft4_name">TÉLÉMÉTRIE BRUTE SANS SCORE SOCIAL</h3>
+                <span class="ft-type" data-i18n="ft4_type">RAW LOGGING</span>
+                <span class="ft-arrow">+</span>
+              </div>
+              <div class="feature-row-content">
+                <div class="ft-detail-grid">
+                  <p class="ft-desc" data-i18n="ft4_desc">
+                    Aucun badge enfantin ni médaille virtuelle. Tu obtiens un journal de bord brut en texte clair : heures exactes de travail pur, applications abattues et temps cumulé en état de flow. Exportable en CSV/JSON.
+                  </p>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft4_m_label">FORMAT JOURNAL</span>
+                    <span class="ft-metric-val">PLAIN TEXT / NDJSON</span>
+                  </div>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft4_m_label2">CONFIDENTIALITÉ</span>
+                    <span class="ft-metric-val">100% LOCAL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ligne 05 -->
+            <div class="feature-row" data-index="4">
+              <div class="feature-row-header">
+                <span class="ft-num">05</span>
+                <h3 class="ft-name" data-i18n="ft5_name">PACTE DE CONCENTRATION SYNCHRONE</h3>
+                <span class="ft-type" data-i18n="ft5_type">COLLECTIVE LOCK</span>
+                <span class="ft-arrow">+</span>
+              </div>
+              <div class="feature-row-content">
+                <div class="ft-detail-grid">
+                  <p class="ft-desc" data-i18n="ft5_desc">
+                    Verrouille toute ton équipe en même temps dans un couloir d'immersion totale. Slack et boîtes mails coupés sur le parc entier pendant 2 heures de fabrication collective ininterrompue.
+                  </p>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft5_m_label">CALCUL DU TEMPS D'ÉQUIPE</span>
+                    <span class="ft-metric-val">SYNCHRONISATION NTP</span>
+                  </div>
+                  <div class="ft-metric-box">
+                    <span class="ft-metric-label" data-i18n="ft5_m_label2">POUVOIR DE DÉVERROUILLAGE</span>
+                    <span class="ft-metric-val">VOTE MAJORITAIRE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PAGE 03 : TARIFS ================= -->
+      <section class="page-view" id="view-tarifs" data-view="tarifs">
+        <div class="pricing-layout">
+          
+          <div class="pricing-top-bar">
+            <div>
+              <span class="section-num">03 // TARIFICATION</span>
+              <h2 class="massive-section-title" data-i18n="pricing_title">INVESTIS DANS TON TEMPS.</h2>
+            </div>
+
+            <!-- Bascule Mensuel / Annuel -->
+            <div class="billing-toggle-container">
+              <span class="billing-label" data-i18n="price_billing_monthly">MENSUEL</span>
+              <button type="button" class="billing-switch" id="billingSwitch" aria-checked="false" role="switch">
+                <span class="switch-handle"></span>
+              </button>
+              <span class="billing-label" data-i18n="price_billing_annual">ANNUEL</span>
+              <span class="billing-discount-badge" data-i18n="price_billing_save">-20% RÉDUCTION</span>
+            </div>
+          </div>
+
+          <!-- Mobile sub-tabs pour les tarifs -->
+          <div class="mobile-tabs-bar" id="pricingMobileTabs">
+            <button type="button" class="m-tab-btn is-active" data-ptab="0" data-i18n="plan_free_name">GRATUIT</button>
+            <button type="button" class="m-tab-btn" data-ptab="1" data-i18n="plan_pro_name">PRO [RECOMMANDÉ]</button>
+            <button type="button" class="m-tab-btn" data-ptab="2" data-i18n="plan_team_name">ÉQUIPE</button>
+          </div>
+
+          <!-- Grille comparative des 3 offres sans défilement -->
+          <div class="pricing-table-grid" id="pricingGrid">
+            
+            <!-- Tier 1 : Gratuit -->
+            <div class="pricing-col" data-tier="free">
+              <div class="pricing-card-header">
+                <span class="tier-badge" data-i18n="plan_free_badge">BASE LOCALE</span>
+                <h3 class="tier-title" data-i18n="plan_free_name">GRATUIT</h3>
+                <p class="tier-lead" data-i18n="plan_free_desc">Pour tester la résistance au blocage sur une seule machine.</p>
+              </div>
+
+              <div class="pricing-card-amount">
+                <div class="price-figure" id="priceValFree">0 €</div>
+                <div class="price-period" data-i18n="price_period_free">POUR TOUJOURS // SANS CB</div>
+              </div>
+
+              <div class="pricing-card-features">
+                <ul class="tier-ft-list">
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_f1">1 machine active (Mac/Win/Linux)</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_f2">Blocage jusqu'à 15 applications</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_f3">Sessions Pomodoro classiques 25m</span>
+                  </li>
+                  <li class="tier-ft-item is-disabled">
+                    <span class="ft-bullet">[-]</span>
+                    <span data-i18n="p_f4">Bypass de sécurité désactivable</span>
+                  </li>
+                  <li class="tier-ft-item is-disabled">
+                    <span class="ft-bullet">[-]</span>
+                    <span data-i18n="p_f5">Synchronisation mobile iOS/Android</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pricing-card-footer">
+                <button type="button" class="btn-tier-outline" data-plan="free" data-i18n="plan_free_cta">
+                  TÉLÉCHARGER LE CLIENT
+                </button>
+              </div>
+            </div>
+
+            <!-- Tier 2 : Pro (Orange sécurité, asymétrique) -->
+            <div class="pricing-col is-featured" data-tier="pro">
+              <div class="featured-banner" data-i18n="plan_pro_flag">STANDARD DES DÉVELOPPEURS & CRÉATEURS</div>
+              
+              <div class="pricing-card-header">
+                <span class="tier-badge-invert" data-i18n="plan_pro_badge">ISOLATION TOTALE</span>
+                <h3 class="tier-title" data-i18n="plan_pro_name">PRO</h3>
+                <p class="tier-lead" data-i18n="plan_pro_desc">Le bouclier impénétrable sur tous vos ordinateurs et téléphones.</p>
+              </div>
+
+              <div class="pricing-card-amount">
+                <div class="price-figure" id="priceValPro">4,99 €</div>
+                <div class="price-period" id="pricePeriodPro" data-i18n="price_period_monthly">PAR MOIS // FACTURÉ MENSUEL</div>
+              </div>
+
+              <div class="pricing-card-features">
+                <ul class="tier-ft-list">
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <strong data-i18n="p_pro1">Blocage matériel absolu (zéro bypass)</strong>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_pro2">Applis et sites illimités</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_pro3">Sync instantanée 5 appareils (Desktop + Mobile)</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_pro4">Cycles ultradiens 90 min adaptatifs</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_pro5">Export de télémétrie CSV & API locale</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pricing-card-footer">
+                <button type="button" class="btn-tier-safety" data-plan="pro" data-i18n="plan_pro_cta">
+                  COMMENCER L'ISOLATION PRO
+                </button>
+              </div>
+            </div>
+
+            <!-- Tier 3 : Équipe -->
+            <div class="pricing-col" data-tier="team">
+              <div class="pricing-card-header">
+                <span class="tier-badge" data-i18n="plan_team_badge">FLUX COLLECTIF</span>
+                <h3 class="tier-title" data-i18n="plan_team_name">ÉQUIPE</h3>
+                <p class="tier-lead" data-i18n="plan_team_desc">Pour les studios et équipes d'ingénierie qui construisent vite.</p>
+              </div>
+
+              <div class="pricing-card-amount">
+                <div class="price-figure" id="priceValTeam">12,99 €</div>
+                <div class="price-period" id="pricePeriodTeam" data-i18n="price_period_team_monthly">PAR SIÈGE / MOIS // MENSUEL</div>
+              </div>
+
+              <div class="pricing-card-features">
+                <ul class="tier-ft-list">
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_team1">Tout le forfait Pro pour chaque membre</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_team2">Sessions collectives synchronisées</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_team3">Console centrale d'administration IT & SSO</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_team4">Règles d'extinction d'outils d'entreprise</span>
+                  </li>
+                  <li class="tier-ft-item is-checked">
+                    <span class="ft-bullet">[+]</span>
+                    <span data-i18n="p_team5">Facturation consolidée sur facture</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pricing-card-footer">
+                <button type="button" class="btn-tier-outline" data-plan="team" data-i18n="plan_team_cta">
+                  DÉPLOYER POUR L'ÉQUIPE
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PAGE 04 : FAQ ================= -->
+      <section class="page-view" id="view-faq" data-view="faq">
+        <div class="faq-layout">
+          
+          <!-- Colonne gauche : Titre et manifeste FAQ -->
+          <div class="faq-left">
+            <span class="section-num">04 // TRANSPARENCE</span>
+            <h2 class="massive-section-title" data-i18n="faq_title">LA VÉRITÉ BRUTE.<br>RÉPONSES SANS DÉTOUR.</h2>
+            
+            <p class="faq-intro" data-i18n="faq_intro">
+              Aucune langue de bois. Pas de marketing édulcoré. Voici exactement comment fonctionne le système et pourquoi il refuse de plier face à tes envies de défiler.
+            </p>
+
+            <div class="faq-notice-box">
+              <span class="notice-title" data-i18n="faq_warning_title">AVERTISSEMENT PROTOCOLE</span>
+              <p class="notice-text" data-i18n="faq_warning_text">
+                Si tu lances une session de 90 minutes en mode Strict, nous ne pourrons pas déverrouiller ton ordinateur même si tu écris au support en suppliant. C'est l'essence même du contrat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Colonne droite : Accordéon à filets fins et fonctionnel -->
+          <div class="faq-right">
+            <div class="faq-accordion" id="faqAccordion">
+
+              <!-- Item 1 -->
+              <div class="faq-item is-open">
+                <button type="button" class="faq-trigger" aria-expanded="true">
+                  <span class="faq-q-num">Q01</span>
+                  <span class="faq-question" data-i18n="faq_q1">Puis-je forcer la fermeture de Fokus pour vérifier mes messages ?</span>
+                  <span class="faq-icon-indicator">&minus;</span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner" data-i18n="faq_a1">
+                    En mode Strict : non. Fokus s’exécute avec les privilèges d’un démon système. Le gestionnaire des tâches ou le Terminal ne peuvent pas tuer le processus sans désactivation d'un timer chiffré. Même redémarrer l’ordinateur relance automatiquement la session avec le temps restant.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-num">Q02</span>
+                  <span class="faq-question" data-i18n="faq_q2">Comment Fokus bloque-t-il sur iOS et Android ?</span>
+                  <span class="faq-icon-indicator">+</span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner" data-i18n="faq_a2">
+                    Sur iOS, nous utilisons l'API Screen Time et un profil VPN local sans aucun serveur distant. Sur Android, nous utilisons le profil administrateur d'appareil. Aucune de tes données de navigation n'est interceptée ni analysée extérieurement : le routage est coupé en local (127.0.0.1 drop).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-num">Q03</span>
+                  <span class="faq-question" data-i18n="faq_q3">Mes données et mon historique de travail restent-ils privés ?</span>
+                  <span class="faq-icon-indicator">+</span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner" data-i18n="faq_a3">
+                    À 100%. Fokus ne possède pas de serveurs de suivi d'activité. Tes journaux de sessions, tes applications bloquées et tes statistiques de temps restent gravés dans une base SQLite chiffrée sur ton disque dur local. Pas de télémétrie cachée, pas de revente de données.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-num">Q04</span>
+                  <span class="faq-question" data-i18n="faq_q4">Que se passe-t-il en cas d'urgence absolue ?</span>
+                  <span class="faq-icon-indicator">+</span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner" data-i18n="faq_a4">
+                    Tu peux préconfigurer une "Liste Blanche Vitale" (appels téléphoniques, urgences médicales, messages d'un contact d'astreinte spécifique). Tout le reste reste hermétiquement verrouillé. Tu décides de ces règles avant de lancer ta session, jamais pendant la tentation.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-num">Q05</span>
+                  <span class="faq-question" data-i18n="faq_q5">Puis-je annuler mon abonnement Pro à tout moment ?</span>
+                  <span class="faq-icon-indicator">+</span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner" data-i18n="faq_a5">
+                    Oui, en un seul clic dans l'interface de gestion de compte. Aucun formulaire de rétention abusif, aucun appel téléphonique obligatoire. Tu gardes l'accès jusqu'au dernier jour de ta période payée, puis ton application rétrograde au forfait Gratuit.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PAGE 05 : CONTACT / NEWSLETTER & TÉMOIGNAGES ================= -->
+      <section class="page-view" id="view-contact" data-view="contact">
+        <div class="contact-layout">
+          
+          <!-- Colonne gauche : Inscription Newsletter Brutaliste & Direct contact -->
+          <div class="contact-left">
+            <span class="section-num">05 // COMMUNICATION DIRECTE</span>
+            <h2 class="massive-section-title" data-i18n="contact_title">REÇOIS LE RAPPORT DE FLOW.</h2>
+            
+            <p class="contact-lead" data-i18n="contact_lead">
+              Un dispatch bi-mensuel sans publicité. Protocoles neuroscientifiques d'attention, audits de déconnexion et mises à jour système du noyau Fokus.
+            </p>
+
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <div class="form-grid">
+                <div class="input-block">
+                  <label for="newsletterEmail" class="input-label" data-i18n="contact_email_label">ADRESSE COURRIEL PROFESSIONNELLE</label>
+                  <input type="email" id="newsletterEmail" class="brutal-input" placeholder="nom@laboratoire.org" required autocomplete="email">
+                </div>
+                <div class="input-block">
+                  <label for="newsletterRole" class="input-label" data-i18n="contact_role_label">ACTIVITÉ PRINCIPALE</label>
+                  <select id="newsletterRole" class="brutal-select">
+                    <option value="dev" data-i18n="role_dev">INGÉNIERIE LOGICIELLE</option>
+                    <option value="research" data-i18n="role_research">RECHERCHE & THÈSE</option>
+                    <option value="design" data-i18n="role_design">CONCEPTION / ARCHITECTURE</option>
+                    <option value="writing" data-i18n="role_writing">ÉCRITURE / CRÉATION</option>
+                    <option value="other" data-i18n="role_other">AUTRE DISCIPLINE EXIGEANTE</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn-safety-submit" id="newsletterSubmitBtn" data-i18n="contact_submit_btn">
+                  S'ABONNER AU PROTOCOLE &rarr;
+                </button>
+              </div>
+
+              <div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div>
+            </form>
+
+            <div class="contact-direct-strip">
+              <span class="direct-label" data-i18n="contact_direct_label">LIAISON TECHNIQUE DIRECTE :</span>
+              <a href="mailto:noyau@fokus-app.io" class="direct-link">noyau@fokus-app.io</a>
+              <span class="direct-pgp">PGP: 4A8F B290 89C1 E3F7</span>
+            </div>
+          </div>
+
+          <!-- Colonne droite : Citations courtes en grand corps (Témoignages authentiques) -->
+          <div class="contact-right">
+            
+            <div class="testimonials-header">
+              <span class="t-badge" data-i18n="testi_badge">RETEX OPÉRATIONNELS</span>
+              <div class="testi-controls">
+                <button type="button" class="btn-testi-nav" id="testiPrevBtn" aria-label="Témoignage précédent">&larr;</button>
+                <span class="testi-counter" id="testiCounter">01 / 03</span>
+                <button type="button" class="btn-testi-nav" id="testiNextBtn" aria-label="Témoignage suivant">&rarr;</button>
+              </div>
+            </div>
+
+            <div class="testimonials-container" id="testimonialsContainer">
+              
+              <!-- Témoignage 1 -->
+              <div class="testi-card is-active" data-index="0">
+                <div class="testi-quote" data-i18n="quote_1_text">
+                  « Fokus m’a fait gagner 3 heures par jour. Zéro fioriture, juste du travail brut. »
+                </div>
+                <div class="testi-author-block">
+                  <div class="testi-author-name" data-i18n="quote_1_author">Marc V.</div>
+                  <div class="testi-author-role" data-i18n="quote_1_role">Développeur backend &mdash; Lyon</div>
+                  <div class="testi-metric" data-i18n="quote_1_metric">184 SESSIONS COMPLÉTÉES // 0 ABANDONS</div>
+                </div>
+              </div>
+
+              <!-- Témoignage 2 -->
+              <div class="testi-card" data-index="1">
+                <div class="testi-quote" data-i18n="quote_2_text">
+                  « J’ai enfin bouclé la rédaction de ma thèse. L’impossibilité absolue de bypasser les blocages est redoutable. »
+                </div>
+                <div class="testi-author-block">
+                  <div class="testi-author-name" data-i18n="quote_2_author">Sophie R.</div>
+                  <div class="testi-author-role" data-i18n="quote_2_role">Chercheuse en neurosciences &mdash; Bordeaux</div>
+                  <div class="testi-metric" data-i18n="quote_2_metric">620 HEURES EN ISOLATION TOTALE</div>
+                </div>
+              </div>
+
+              <!-- Témoignage 3 -->
+              <div class="testi-card" data-index="2">
+                <div class="testi-quote" data-i18n="quote_3_text">
+                  « Les autres applications t'envoient des notifications stupides pour te dire de te calmer. Fokus se tait et abat les distractions. »
+                </div>
+                <div class="testi-author-block">
+                  <div class="testi-author-name" data-i18n="quote_3_author">Karim B.</div>
+                  <div class="testi-author-role" data-i18n="quote_3_role">Architecte d'intérieur &mdash; Marseille</div>
+                  <div class="testi-metric" data-i18n="quote_3_metric">4 LIVRABLES DE CHANTIER EN AVANCE</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BARRE TECHNIQUE INFERIEURE / FOOTER (100% zéro scroll) -->
+    <footer class="app-footer">
+      <div class="footer-left">
+        <span class="footer-status-dot"></span>
+        <span class="footer-status-text" data-i18n="footer_status">KERNEL SHIELD v4.0.8 [RUNNING]</span>
+        <span class="footer-divider">|</span>
+        <span class="footer-coord">LAT 48.8566° N &bull; LON 2.3522° E</span>
+      </div>
+
+      <div class="footer-center">
+        <span class="footer-swiss-mark">SWISS RATIONAL GRID SYSTEM &bull; STRICT 100VH NO-SCROLL POLICY</span>
+      </div>
+
+      <div class="footer-right">
+        <span class="footer-copy">&copy; 2026 FOKUS LABS.</span>
+        <span class="footer-legal" data-i18n="footer_legal">TOUS DROITS RÉSERVÉS.</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- SCRIPT D'APPLICATION MULTILINGUE & INTERACTIVITÉ -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Fotográfica — Maison Lumière Lyon | Composición Editorial</title>
+  <meta name="description" content="Descubra la estética visual de Maison Lumière en Lyon: composición asimétrica de las creaciones de Antoine Reverdy, salón íntimo de 28 cubiertos y luz natural.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- Encabezado editorial fijo -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Inicio">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Estrella Michelin</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html">Inicio</a></li>
+          <li class="nav-item"><a href="chef.html">El Chef</a></li>
+          <li class="nav-item"><a href="menu.html">La Carta</a></li>
+          <li class="nav-item"><a href="galerie.html" class="active">Galería</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservas</a></li>
+        </ul>
+
+        <!-- Selector discreto de idioma en esquina -->
+        <div class="lang-corner" aria-label="Seleccionar idioma">
+          <a href="../fr/galerie.html" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/galerie.html" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="galerie.html" class="active" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menú móvil a pantalla completa -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">01. Inicio</a></li>
+        <li><a href="chef.html">02. El Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. Carta Impresa &amp; Menús</a></li>
+        <li><a href="galerie.html" class="active">04. Galería Fotográfica</a></li>
+        <li><a href="reservation.html">05. Reservas (28 Cubiertos)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="../fr/galerie.html">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/galerie.html">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="galerie.html" class="active">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visor principal 100vh estricto -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Columnas 1 a 4: Introducción & selector de series -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 4; padding: 2.2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">04</span>
+              <span>Cuaderno Visual</span>
+            </div>
+
+            <h1 class="editorial-title-lg">
+              La materia noble, <em>el gesto</em> y el espacio.
+            </h1>
+
+            <p class="lead-p">
+              Una cuidada composición de instantes captados con luz natural en el comedor abovedado del siglo XVI y ante los fuegos del Chef Antoine Reverdy. Cerámica artesanal, mantelería de lino y sosiego.
+            </p>
+
+            <!-- Selector de series -->
+            <div style="border: 1px solid var(--rule-hairline); padding: 1rem 1.2rem; background: var(--bg-paper-tint); margin-top: 1.2rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="caption-editorial">Láminas Disponibles</span>
+                <span id="galSeriesIndicator" style="font-family: var(--font-serif); font-size: 1rem; font-weight: 700; color: var(--brick-red);">01 / 02</span>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--ink-muted); margin: 0.4rem 0 0.8rem 0;">
+                Serie I: El Plato y el Fuego &bull; Serie II: El Salón y la Mesa
+              </p>
+              <div style="display: flex; gap: 0.6rem;">
+                <button id="galPrev" class="btn-editorial" style="padding: 0.4rem 1rem;" aria-label="Lámina anterior">&larr; Anterior</button>
+                <button id="galNext" class="btn-editorial" style="padding: 0.4rem 1rem;" aria-label="Lámina siguiente">Siguiente &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+            <p class="caption-editorial" style="margin-bottom: 0.6rem;">
+              Fotografías en luz cenital y natural · 14 Rue Saint-Jean
+            </p>
+            <a href="reservation.html" class="btn-editorial btn-solid-brick" style="width: 100%;">
+              Reservar mesa (28 cubiertos)
+            </a>
+          </div>
+        </section>
+
+        <!-- Columnas 5 a 12: Composición asimétrica de fotografías -->
+        <section class="col-mobile-full" style="grid-column: span 8; background-color: var(--bg-paper); height: 100%; overflow: hidden; position: relative;">
+          
+          <!-- SERIE I: El Plato & El Gesto -->
+          <div class="gallery-composition gallery-series-view" style="display: grid;">
+            <div class="gal-item gal-tall">
+              <img src="../assets/images/plat_poisson.jpg" alt="Salvelino del lago Léman con rebozuelos">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">01</strong> Salvelino y Agraz Salvaje</span>
+                <span style="font-size: 0.62rem; color: #BBB;">Cerámica Artesanal</span>
+              </div>
+            </div>
+
+            <div class="gal-item gal-wide">
+              <img src="../assets/images/chef.jpg" alt="Antoine Reverdy en el pase de cocina">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">02</strong> Antoine Reverdy al pase</span>
+                <span style="font-size: 0.62rem; color: #BBB;">Minuto de servicio</span>
+              </div>
+            </div>
+
+            <div class="gal-item">
+              <img src="../assets/images/entree.jpg" alt="Entrante vegetal con hierbas de montaña">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">03</strong> Hierbas y Fondo Emulsionado</span>
+              </div>
+            </div>
+
+            <div class="gal-item">
+              <img src="../assets/images/dessert.jpg" alt="Postre de chocolate Guanaja">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">04</strong> Guanaja y Piñones</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERIE II: El Espacio & La Mesa -->
+          <div class="gallery-composition gallery-series-view" style="display: none;">
+            <div class="gal-item gal-wide">
+              <img src="../assets/images/salle_lyon.jpg" alt="Salón abovedado de 28 cubiertos en el Viejo Lyon">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">05</strong> Salón del Siglo XVI &bull; 28 Cubiertos</span>
+                <span style="font-size: 0.62rem; color: #BBB;">Viejo Lyon Saint-Jean</span>
+              </div>
+            </div>
+
+            <div class="gal-item gal-tall">
+              <img src="../assets/images/ambiance.jpg" alt="Atmósfera nocturna serena">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">06</strong> Iluminación cálida de noche</span>
+                <span style="font-size: 0.62rem; color: #BBB;">Servicio pausado</span>
+              </div>
+            </div>
+
+            <div class="gal-item">
+              <img src="../assets/images/salle_lyon.jpg" alt="Detalle de cristalería y lino" style="object-position: bottom;">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">07</strong> Lino y Cristal Soplado</span>
+              </div>
+            </div>
+
+            <div class="gal-item">
+              <img src="../assets/images/plat_poisson.jpg" alt="Detalle de masas y jugos" style="object-position: center;">
+              <div class="gal-caption-bar">
+                <span><strong class="gal-num">08</strong> Masa Madre y Fondos</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Cinta de pie de página -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">Galería Visual</span>
+        <span>Fotografía Gastronómica en Luz Natural</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>«Nada accesorio, todo fundado en la verdad de la luz.»</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

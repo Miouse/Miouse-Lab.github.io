@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Rythme — Suivi d'habitudes sobre & focalisé</title>
+  <meta name="description" content="Rythme est une application sobre de suivi d'habitudes quotidiennes avec interface plein écran sans défilement, grille d'activité 30 jours et raccourcis clavier réels.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2308090a%22/><circle cx=%2250%22 cy=%2250%22 r=%2225%22 fill=%22%23c6f135%22/></svg>">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- BARRE LATÉRALE (DESKTOP) -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <div class="brand-section">
+        <div class="brand-title-wrap">
+          <div class="brand-symbol">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h1 class="brand-title">Rythme</h1>
+        </div>
+        <span class="brand-tag">v2.0</span>
+      </div>
+
+      <nav class="nav-menu" aria-label="Navigation principale">
+        <button class="nav-item active" data-view="today" id="nav-today">
+          <div class="nav-item-left">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Aujourd'hui</span>
+          </div>
+          <kbd>1</kbd>
+        </button>
+
+        <button class="nav-item" data-view="calendar" id="nav-calendar">
+          <div class="nav-item-left">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Calendrier</span>
+          </div>
+          <kbd>2</kbd>
+        </button>
+
+        <button class="nav-item" data-view="stats" id="nav-stats">
+          <div class="nav-item-left">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Statistiques</span>
+          </div>
+          <kbd>3</kbd>
+        </button>
+
+        <button class="nav-item" data-view="settings" id="nav-settings">
+          <div class="nav-item-left">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+            <span>Réglages</span>
+          </div>
+          <kbd>4</kbd>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-metric-box">
+          <span class="sidebar-metric-lbl">Série active</span>
+          <span class="sidebar-metric-val" id="sidebarStreakCount">-- j.</span>
+        </div>
+
+        <div class="sidebar-shortcuts-summary">
+          <div class="shortcut-hint-row">
+            <span>Nouvelle</span>
+            <kbd>N</kbd>
+          </div>
+          <div class="shortcut-hint-row">
+            <span>Cocher</span>
+            <kbd>Espace</kbd>
+          </div>
+          <div class="shortcut-hint-row">
+            <span>Naviguer</span>
+            <kbd>↑</kbd> <kbd>↓</kbd>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ZONE PRINCIPALE SANS SCROLL -->
+    <main class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="date-indicator" id="todayDateBadge">
+            <span class="status-pip"></span> Chargement...
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Sélecteur rapide de langue -->
+          <nav class="lang-switch" aria-label="Langues">
+            <a href="../fr/" class="lang-btn active" title="Français">FR</a>
+            <a href="../en/" class="lang-btn" title="English">EN</a>
+            <a href="../es/" class="lang-btn" title="Español">ES</a>
+          </nav>
+
+          <!-- Bascule de thème -->
+          <button class="btn-icon" id="themeToggleBtn" aria-label="Basculer thème sombre / clair" title="Changer de thème">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m14.14-14.14l-1.41 1.41"/></svg>
+          </button>
+
+          <!-- Bouton ajouter -->
+          <button class="btn-primary" id="topAddHabitBtn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4"/></svg>
+            <span>Nouvelle habitude</span>
+            <kbd>N</kbd>
+          </button>
+        </div>
+      </header>
+
+      <!-- CONTENEUR DES 4 VUES -->
+      <div class="views-wrapper">
+
+        <!-- VUE 1 : AUJOURD'HUI -->
+        <section class="view-pane active" id="view-today" aria-labelledby="today-heading">
+          <div class="view-header">
+            <div class="view-heading">
+              <h2 id="today-heading">Aujourd'hui</h2>
+              <p id="todaySubtitleMsg">Exécutez vos engagements quotidiens sans distraction.</p>
+            </div>
+          </div>
+
+          <!-- Barre de progression et rappel des raccourcis -->
+          <div class="today-summary-bar">
+            <div class="today-summary-left">
+              <div class="today-stat-pill">
+                <span class="val" id="todayDoneCount">0/0</span>
+                <span class="lbl">complétées</span>
+              </div>
+              <div class="progress-track-linear">
+                <div class="progress-fill-linear" id="todayProgressFill"></div>
+              </div>
+              <span class="val" id="todayPercent" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--lime);">0%</span>
+            </div>
+
+            <div class="keyboard-action-bar">
+              <span><kbd>↑</kbd> <kbd>↓</kbd> Naviguer</span>
+              <span><kbd>Espace</kbd> Cocher</span>
+              <span><kbd>Suppr</kbd> Supprimer</span>
+            </div>
+          </div>
+
+          <!-- Liste des habitudes (Paginée, sans scroll de page) -->
+          <div class="habits-container">
+            <div id="habitsContainer" style="display: contents;">
+              <!-- Injecté dynamiquement par app.js -->
+            </div>
+
+            <div class="pagination-bar" id="paginationBar">
+              <span class="page-info" id="pageInfo">Page 1 sur 1</span>
+              <div class="pagination-controls">
+                <button class="btn-page" id="prevPageBtn" disabled>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                  Précédent
+                </button>
+                <button class="btn-page" id="nextPageBtn" disabled>
+                  Suivant
+                  <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VUE 2 : CALENDRIER (GRILLE GITHUB 30 JOURS) -->
+        <section class="view-pane" id="view-calendar" aria-labelledby="cal-heading">
+          <div class="view-header">
+            <div class="view-heading">
+              <h2 id="cal-heading">Calendrier</h2>
+              <p>Régularité des 30 derniers jours (grille d'activité GitHub).</p>
+            </div>
+          </div>
+
+          <div class="calendar-layout">
+            <div class="calendar-top-stats">
+              <div class="cal-stat-card">
+                <span class="cal-stat-val" id="calMetricRate">--%</span>
+                <span class="cal-stat-lbl">Taux de régularité</span>
+              </div>
+              <div class="cal-stat-card">
+                <span class="cal-stat-val" id="calMetricActive">-- / 30</span>
+                <span class="cal-stat-lbl">Jours actifs</span>
+              </div>
+              <div class="cal-stat-card">
+                <span class="cal-stat-val" id="calMetricBest">--</span>
+                <span class="cal-stat-lbl">Jour le plus prolifique</span>
+              </div>
+            </div>
+
+            <div class="github-grid-card">
+              <div class="grid-card-header">
+                <div class="grid-card-title">Matrice de contribution (30 jours)</div>
+                <div class="grid-legend">
+                  <span>Moins</span>
+                  <div class="legend-square sq-0"></div>
+                  <div class="legend-square sq-1"></div>
+                  <div class="legend-square sq-2"></div>
+                  <div class="legend-square sq-3"></div>
+                  <div class="legend-square sq-4"></div>
+                  <span>Plus</span>
+                </div>
+              </div>
+
+              <div class="calendar-matrix-rows" id="calendarMatrixContent">
+                <!-- Lignes de contribution injectées par app.js -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VUE 3 : STATISTIQUES (CHIFFRES MONOSPACE + GRAPHIQUE SVG FIN) -->
+        <section class="view-pane" id="view-stats" aria-labelledby="stats-heading">
+          <div class="view-header">
+            <div class="view-heading">
+              <h2 id="stats-heading">Statistiques</h2>
+              <p>Données brutes, séries de rigueur et dynamique hebdomadaire.</p>
+            </div>
+          </div>
+
+          <div class="stats-layout">
+            <div class="stats-grid-top">
+              <div class="stat-box">
+                <span class="stat-box-num" id="statCurrentStreak">0 j.</span>
+                <span class="stat-box-lbl">Série en cours</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-box-num" id="statBestStreak">0 j.</span>
+                <span class="stat-box-lbl">Record de série</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-box-num" id="statSuccessRate">0%</span>
+                <span class="stat-box-lbl">Taux de réussite</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-box-num" id="statTotalCompleted">0</span>
+                <span class="stat-box-lbl">Total validé (30j)</span>
+              </div>
+            </div>
+
+            <div class="stats-middle-row">
+              <!-- Graphique hebdomadaire en SVG fin -->
+              <div class="chart-panel-box">
+                <div class="chart-header">
+                  <div class="chart-title">Activité de la semaine</div>
+                  <div class="chart-subtitle">Habitudes cochées / jour</div>
+                </div>
+                <div class="svg-chart-container" id="weeklySvgChart">
+                  <!-- SVG vectoriel fin injecté par app.js -->
+                </div>
+              </div>
+
+              <!-- Maintien par habitude -->
+              <div class="breakdown-panel-box">
+                <div class="chart-header">
+                  <div class="chart-title">Maintien par habitude</div>
+                  <div class="chart-subtitle">Taux 30 jours</div>
+                </div>
+                <div class="breakdown-list" id="habitsBreakdownList">
+                  <!-- Lignes injectées par app.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VUE 4 : RÉGLAGES -->
+        <section class="view-pane" id="view-settings" aria-labelledby="settings-heading">
+          <div class="view-header">
+            <div class="view-heading">
+              <h2 id="settings-heading">Réglages</h2>
+              <p>Préférences d'affichage, raccourcis et gestion des données.</p>
+            </div>
+          </div>
+
+          <div class="settings-layout">
+            <!-- Langue -->
+            <div class="settings-card">
+              <div class="settings-card-info">
+                <div class="settings-card-title">Langue de l'interface</div>
+                <div class="settings-card-desc">Basculez instantanément entre FR, EN et ES</div>
+              </div>
+              <div class="settings-button-group">
+                <a href="../fr/" class="btn-toggle-option active">FR</a>
+                <a href="../en/" class="btn-toggle-option">EN</a>
+                <a href="../es/" class="btn-toggle-option">ES</a>
+              </div>
+            </div>
+
+            <!-- Thème (Noir profond / Gris très clair) -->
+            <div class="settings-card">
+              <div class="settings-card-info">
+                <div class="settings-card-title">Apparence</div>
+                <div class="settings-card-desc">Mode sombre (noir profond) ou mode clair (gris très clair)</div>
+              </div>
+              <div class="settings-button-group">
+                <button class="btn-toggle-option btn-theme-choice active" data-theme="dark">Sombre</button>
+                <button class="btn-toggle-option btn-theme-choice" data-theme="light">Clair</button>
+              </div>
+            </div>
+
+            <!-- Raccourcis clavier réels -->
+            <div class="shortcuts-table-card">
+              <div class="settings-card-info">
+                <div class="settings-card-title">Raccourcis clavier réels</div>
+                <div class="settings-card-desc">Naviguez à pleine vitesse sans quitter le clavier</div>
+              </div>
+              <div class="shortcuts-grid">
+                <div class="shortcut-pair">
+                  <span>Ajouter une habitude</span>
+                  <kbd>N</kbd>
+                </div>
+                <div class="shortcut-pair">
+                  <span>Cocher la sélection</span>
+                  <kbd>Espace</kbd>
+                </div>
+                <div class="shortcut-pair">
+                  <span>Naviguer dans la liste</span>
+                  <kbd>↑</kbd> <kbd>↓</kbd>
+                </div>
+                <div class="shortcut-pair">
+                  <span>Supprimer la sélection</span>
+                  <kbd>Suppr</kbd>
+                </div>
+                <div class="shortcut-pair">
+                  <span>Changer de vue</span>
+                  <span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></span>
+                </div>
+                <div class="shortcut-pair">
+                  <span>Fermer le dialogue</span>
+                  <kbd>Échap</kbd>
+                </div>
+              </div>
+            </div>
+
+            <!-- Données de session -->
+            <div class="settings-card">
+              <div class="settings-card-info">
+                <div class="settings-card-title">Données de session</div>
+                <div class="settings-card-desc">Stockées en mémoire pour cette session uniquement.</div>
+              </div>
+              <div class="settings-button-group">
+                <button class="btn-secondary" id="btnReloadDemo">Recharger les exemples</button>
+                <button class="btn-secondary" id="btnClearData" style="color: var(--danger);">Tout effacer</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- NAVIGATION MOBILE DU BAS (< 768px) -->
+    <nav class="mobile-bottom-nav" aria-label="Navigation mobile">
+      <button class="mobile-nav-btn active" data-view="today">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Aujourd'hui</span>
+      </button>
+      <button class="mobile-nav-btn" data-view="calendar">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span>Calendrier</span>
+      </button>
+      <button class="mobile-nav-btn" data-view="stats">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <span>Stats</span>
+      </button>
+      <button class="mobile-nav-btn" data-view="settings">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>Réglages</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- MODAL : NOUVELLE HABITUDE (AVEC ICÔNES VECTORIELLES NETTES) -->
+  <div class="modal-overlay" id="addHabitModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Nouvelle habitude</h3>
+        <button class="btn-icon" id="closeModalBtn" aria-label="Fermer">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="addHabitForm">
+        <div class="form-group">
+          <label class="form-label" for="habitNameInput">Intitulé de l'habitude</label>
+          <input type="text" id="habitNameInput" class="form-input" placeholder="ex. Revue de code 30 min" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="habitCategorySelect">Catégorie</label>
+          <select id="habitCategorySelect" class="form-input">
+            <option value="focus">Focus</option>
+            <option value="code">Code</option>
+            <option value="learning">Apprentissage</option>
+            <option value="health">Santé</option>
+            <option value="routine">Routine</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Icône vectorielle</label>
+          <div class="icon-selector-grid">
+            <button type="button" class="icon-choice-btn active" data-icon="target" title="Cible">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="book" title="Livre">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="code" title="Code">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="activity" title="Activité">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="droplet" title="Hydratation">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21.5c4.142 0 7.5-3.358 7.5-7.5 0-4.5-7.5-11.5-7.5-11.5S4.5 9.5 4.5 14c0 4.142 3.358 7.5 7.5 7.5z"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="sun" title="Matin">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m14.14-14.14l-1.41 1.41"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="coffee" title="Pause">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+            </button>
+            <button type="button" class="icon-choice-btn" data-icon="flame" title="Intensité">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="cancelModalBtn">Annuler</button>
+          <button type="submit" class="btn-primary">Ajouter <kbd>↵</kbd></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Lumière — Restaurant Gastronomique à Lyon | Chef Antoine Reverdy · 1 Étoile</title>
+  <meta name="description" content="Maison Lumière, table gastronomique confidentielle de 28 couverts dans le Vieux Lyon. Cuisine d'auteur par le Chef Antoine Reverdy, 1 étoile Michelin.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- En-tête éditorial fixe -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Accueil">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Étoile Michelin</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html" class="active">Accueil</a></li>
+          <li class="nav-item"><a href="chef.html">Le Chef</a></li>
+          <li class="nav-item"><a href="menu.html">La Carte</a></li>
+          <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+          <li class="nav-item"><a href="reservation.html">Réservation</a></li>
+        </ul>
+
+        <!-- Sélecteur de langue discret en coin -->
+        <div class="lang-corner" aria-label="Choix de la langue">
+          <a href="index.html" class="active" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/index.html" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/index.html" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menu mobile plein écran (sans scroll) -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">01. Accueil</a></li>
+        <li><a href="chef.html">02. Le Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. La Carte &amp; Menus</a></li>
+        <li><a href="galerie.html">04. Galerie Photographique</a></li>
+        <li><a href="reservation.html">05. Réservation (28 Couverts)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="index.html" class="active">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/index.html">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/index.html">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteneur principal 100vh strict en grille asymétrique 12 colonnes -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Colonnes 1 à 5 : Texte manifeste, titre géant & onglets d'informations -->
+        <section class="col-border-r col-mobile-full" style="grid-column: span 5; padding: 2rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">01</span>
+              <span>Introduction · Table d'Auteur</span>
+            </div>
+            
+            <h1 class="editorial-title-huge">
+              L'épure et le feu, <em>28 couverts</em> au cœur de Lyon.
+            </h1>
+            
+            <p class="lead-p">
+              Une seule étoile Michelin, vingt-huit chaises en noyer et une cuisine d'auteur silencieuse. Le chef Antoine Reverdy dépouille la grande tradition lyonnaise de ses artifices pour n'en garder que la sève, le jus corsé et le produit brut.
+            </p>
+          </div>
+
+          <!-- Onglets d'informations zéro-scroll -->
+          <div style="display: flex; flex-direction: column; flex: 1; justify-content: flex-end; margin-top: 1rem;">
+            <div class="tab-strip" data-tabs="home-tabs">
+              <button class="tab-trigger active" data-target="pane-service">01. Service &amp; Lieu</button>
+              <button class="tab-trigger" data-target="pane-avis">02. Avis de Convives</button>
+              <button class="tab-trigger" data-target="pane-terroir">03. Filière Courte</button>
+            </div>
+
+            <div class="tab-panel-container" data-tab-group="home-tabs" style="min-height: 120px;">
+              <!-- Pane Service -->
+              <div id="pane-service" class="tab-pane active">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div>
+                    <span class="caption-editorial">Horaires d'Ouverture</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                      <strong>Dîner :</strong> Mar &ndash; Sam (19h45 &ndash; 21h15)<br>
+                      <strong>Déjeuner :</strong> Ven &ndash; Sam (12h15 &ndash; 13h30)<br>
+                      <em>Fermé dimanche &amp; lundi</em>
+                    </p>
+                  </div>
+                  <div>
+                    <span class="caption-editorial">Adresse &amp; Accès</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                      14, Rue Saint-Jean, 69005 Lyon<br>
+                      Métro D Vieux Lyon (2 min)<br>
+                      Service voiturier en soirée
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pane Avis Clients Plausibles -->
+              <div id="pane-avis" class="tab-pane">
+                <div class="review-item" style="margin-bottom: 0;">
+                  <p class="review-quote">« La quenelle contemporaine au brochet du Léman est d'une légèreté presque insolente. Une précision d'orfèvre. »</p>
+                  <p class="review-author">Laurent Veyron, <span>relieur d'art, Lyon 2e</span></p>
+                </div>
+              </div>
+
+              <!-- Pane Terroirs -->
+              <div id="pane-terroir" class="tab-pane">
+                <p style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-muted);">
+                  Maraîchage biologique de la vallée du Garon, ombles chevaliers de pêche douce alpine, volailles de Bresse d'éleveurs indépendants et vins vivants de la vallée du Rhône septentrionale.
+                </p>
+              </div>
+            </div>
+
+            <!-- Boutons d'action éditoriaux -->
+            <div style="display: flex; gap: 1rem; margin-top: 1.2rem;">
+              <a href="reservation.html" class="btn-editorial btn-solid-brick">Réserver une table</a>
+              <a href="menu.html" class="btn-editorial">Lire la carte</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Colonnes 6 à 9 : Composition visuelle asymétrique (photo d'ambiance) -->
+        <section class="col-border-r col-mobile-hidden" style="grid-column: span 4; position: relative; background: var(--bg-paper-tint); overflow: hidden;">
+          <img src="../assets/images/salle_lyon.jpg" alt="Salle intimiste de Maison Lumière à Lyon" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div class="gal-caption-bar">
+            <span><strong class="gal-num">N° 01</strong> Salle historique aux 28 couverts</span>
+            <span style="color: var(--ink-light); font-size: 0.62rem;">Lyon Vieux-Saint-Jean</span>
+          </div>
+        </section>
+
+        <!-- Colonnes 10 à 12 : Carnet de bord & distinction Michelin -->
+        <section class="col-mobile-hidden" style="grid-column: span 3; padding: 2rem 1.8rem; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-paper);">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">02</span>
+              <span>Carnet de Bord</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-solid); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <span class="caption-editorial">Guide Michelin · Édition 2024</span>
+              <h2 style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; margin: 0.4rem 0 0.6rem 0; color: var(--ink-black);">
+                Une Étoile Décernée
+              </h2>
+              <p style="font-size: 0.8rem; color: var(--ink-muted); line-height: 1.5;">
+                « Antoine Reverdy impose un ton singulier : le geste est net, les sucs concentrés avec rigueur, et la salle de 28 couverts offre une intimité rare au Vieux Lyon. »
+              </p>
+            </div>
+
+            <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+              <span class="caption-editorial">Capacité Volontaire</span>
+              <p style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--brick-red); line-height: 1.1; margin: 0.3rem 0;">
+                28 Couverts
+              </p>
+              <p style="font-size: 0.78rem; color: var(--ink-muted);">
+                Ni rotation, ni double service. La table vous appartient pour l'ensemble du déjeuner ou du dîner.
+              </p>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1rem;">
+            <a href="chef.html" class="btn-editorial" style="width: 100%;">Rencontrer le Chef &rarr;</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Ruban de bas de page éditorial -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">1 Étoile Michelin</span>
+        <span>28 Couverts · Cuisine d'Auteur</span>
+        <span class="col-mobile-hidden">14 Rue Saint-Jean, 69005 Lyon</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>« La simplicité est le point d'aboutissement de la clarté. »</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

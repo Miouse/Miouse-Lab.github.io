@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Antoine Reverdy — Maison Lumière Lyon | 1 Michelin Star</title>
+  <meta name="description" content="Discover the culinary journey and philosophy of Chef Antoine Reverdy at Maison Lumière in Lyon. Sincere, precise haute cuisine dedicated to twenty-eight guests.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="page-container page-sweep-in">
+    <!-- Fixed editorial header -->
+    <header class="site-header">
+      <a href="index.html" class="brand-unit" aria-label="Maison Lumière - Home">
+        <span class="brand-name">Maison Lumière</span>
+        <span class="brand-meta">Lyon · 1 Michelin Star</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-cluster">
+        <ul class="editorial-nav">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="chef.html" class="active">The Chef</a></li>
+          <li class="nav-item"><a href="menu.html">The Menu</a></li>
+          <li class="nav-item"><a href="galerie.html">Gallery</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservations</a></li>
+        </ul>
+
+        <!-- Discrete corner language selector -->
+        <div class="lang-corner" aria-label="Select language">
+          <a href="../fr/chef.html" title="Français">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="chef.html" class="active" title="English">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/chef.html" title="Español">ES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">01. Home</a></li>
+        <li><a href="chef.html" class="active">02. Chef Antoine Reverdy</a></li>
+        <li><a href="menu.html">03. Printed Carte &amp; Menus</a></li>
+        <li><a href="galerie.html">04. Photographic Gallery</a></li>
+        <li><a href="reservation.html">05. Reservations (28 Seats)</a></li>
+      </ul>
+      <div style="border-top: 1px solid var(--rule-hairline); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: baseline;">
+        <span class="caption-editorial">Maison Lumière · 14 Rue Saint-Jean, Lyon</span>
+        <div class="lang-corner" style="border: none; padding: 0;">
+          <a href="../fr/chef.html">FR</a>
+          <span class="lang-sep">/</span>
+          <a href="chef.html" class="active">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="../es/chef.html">ES</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main viewport 100vh strict -->
+    <main class="main-viewport">
+      <div class="editorial-grid">
+        
+        <!-- Columns 1 to 5: Chef portrait -->
+        <section class="col-border-r col-mobile-hidden" style="grid-column: span 5; position: relative; background: var(--bg-paper-tint); overflow: hidden;">
+          <img src="../assets/images/chef.jpg" alt="Chef Antoine Reverdy at Maison Lumière pass" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div class="gal-caption-bar">
+            <span><strong class="gal-num">FIG. 02</strong> Antoine Reverdy at the pass</span>
+            <span style="color: var(--ink-light); font-size: 0.62rem;">Kitchen Atelier · Lyon</span>
+          </div>
+        </section>
+
+        <!-- Columns 6 to 12: Profile, pedigree, artisanal partners -->
+        <section class="col-mobile-full" style="grid-column: span 7; padding: 2.2rem 2.8rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="section-folio">
+              <span class="folio-num">02</span>
+              <span>Profile &amp; Philosophy · Antoine Reverdy</span>
+            </div>
+
+            <h1 class="editorial-title-huge" style="margin-bottom: 0.8rem;">
+              Precision of hand, <em>memory of fire</em>.
+            </h1>
+
+            <p class="lead-p">
+              Raised in the hills of northern Rhône and Beaujolais, Antoine Reverdy honed his craft within iconic three-star institutions in Roanne and French-speaking Switzerland before opening his sanctuary in Old Lyon. His North Star: twenty-eight guests at a time, ensuring absolute command over each pan, glaze, and aroma.
+            </p>
+          </div>
+
+          <!-- Zero-scroll tabbed navigation -->
+          <div style="display: flex; flex-direction: column; flex: 1; justify-content: flex-end; margin-top: 1rem;">
+            <div class="tab-strip" data-tabs="chef-tabs-en">
+              <button class="tab-trigger active" data-target="pane-vision-en">01. Culinary Rigor</button>
+              <button class="tab-trigger" data-target="pane-pedigree-en">02. Lineage &amp; Training</button>
+              <button class="tab-trigger" data-target="pane-growers-en">03. Partner Growers</button>
+            </div>
+
+            <div class="tab-panel-container" data-tab-group="chef-tabs-en" style="min-height: 125px;">
+              <!-- Pane Vision -->
+              <div id="pane-vision-en" class="tab-pane active">
+                <p style="font-size: 0.85rem; line-height: 1.6; color: var(--ink-muted);">
+                  “Cooking without chatter. A dish should never present more than three forthright voices: an earthy root, a prime cut, and a meticulously concentrated juice. Everything else is mere distraction. We cook purely on demand, guided by eye, heat, and texture.”
+                </p>
+                <p class="review-author" style="margin-top: 0.6rem;">
+                  — Antoine Reverdy <span>· Chef &amp; Owner</span>
+                </p>
+              </div>
+
+              <!-- Pane Lineage -->
+              <div id="pane-pedigree-en" class="tab-pane">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                  <div>
+                    <span class="caption-editorial">Mentorship &amp; Masters</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.3rem;">
+                      Tenures at Maison Troisgros (Roanne) and Crissier. Steeped in the quiet choreography of fine dining and gentle lakeside fish preparations.
+                    </p>
+                  </div>
+                  <div>
+                    <span class="caption-editorial">Michelin Recognition (2023)</span>
+                    <p style="font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.3rem;">
+                      Maison Lumière was founded in 2021. Awarded its first Michelin star within 18 months, celebrated for its restrained poetry and uncompromising local terroir.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pane Growers -->
+              <div id="pane-growers-en" class="tab-pane">
+                <p style="font-size: 0.82rem; line-height: 1.55; color: var(--ink-muted);">
+                  <strong>Ferme des Roches (Messimy):</strong> bitter herbs, heritage root vegetables grown in living soil.<br>
+                  <strong>Lake Geneva line-fishermen:</strong> arctic char and fera landed at dawn.<br>
+                  <strong>Condrieu &amp; Côte-Rôtie estates:</strong> direct cellar allocations from biodynamic vintners.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 1.4rem; align-items: center;">
+              <a href="menu.html" class="btn-editorial btn-solid-brick">Explore the dishes</a>
+              <a href="reservation.html" class="btn-editorial">Book (28 seats)</a>
+              <span class="caption-editorial col-mobile-hidden" style="margin-left: auto;">Evening service &amp; fri-sat lunch</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer ticker -->
+    <footer class="site-ticker">
+      <div class="ticker-left">
+        <span class="ticker-pill">Antoine Reverdy</span>
+        <span>1 Michelin Star · 28 Seats</span>
+      </div>
+      <div class="ticker-right col-mobile-hidden">
+        <span>“The ingredient commands, the hand obeys.”</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
