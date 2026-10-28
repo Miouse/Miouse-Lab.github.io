@@ -53,7 +53,7 @@ body {
 }
 
 .entete-identite {
-  max-width: 640px;
+  max-width: 660px;
 }
 
 .nom {
@@ -61,13 +61,20 @@ body {
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+.localisation {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
 .presentation {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   color: var(--texte-secondaire);
-  max-width: 60ch;
+  max-width: 62ch;
 }
 
 .navigation {
@@ -124,11 +131,24 @@ main.conteneur {
   color: var(--texte);
 }
 
+.categorie-projets {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texte-secondaire);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
 .grille-projets {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
+}
+
+.grille-espacement {
+  margin-bottom: 40px;
 }
 
 .element-projet {
@@ -139,7 +159,7 @@ main.conteneur {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 220px;
+  min-height: 200px;
   background-color: var(--surface);
   border: 1px solid var(--bordure);
   border-radius: 2px;
@@ -205,15 +225,49 @@ main.conteneur {
   line-height: 1.7;
 }
 
-.bloc-competences {
-  margin-top: 28px;
+.grille-parcours {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
 }
 
 .sous-titre {
   font-size: 1rem;
   font-weight: 600;
   color: var(--texte);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.liste-parcours {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.element-parcours {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 14px;
+  border-left: 2px solid var(--bordure);
+}
+
+.parcours-titre {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texte);
+}
+
+.parcours-detail {
+  font-size: 0.925rem;
+  color: var(--texte-secondaire);
+  line-height: 1.55;
+}
+
+.bloc-competences {
+  margin-top: 32px;
 }
 
 .liste-competences {
@@ -229,6 +283,55 @@ main.conteneur {
   padding-left: 12px;
   border-left: 2px solid var(--accent);
   line-height: 1.4;
+}
+
+.liste-contact {
+  list-style: none;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px 32px;
+}
+
+.element-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 20px;
+  background-color: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: 2px;
+}
+
+.contact-libelle {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--texte-secondaire);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-lien {
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-word;
+}
+
+.contact-lien:hover {
+  color: var(--texte);
+}
+
+.contact-lien:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.contact-valeur {
+  font-size: 0.95rem;
+  color: var(--texte);
 }
 
 .pied-de-page {
